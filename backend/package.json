@@ -4,6 +4,7 @@
     "description": "",
     "main": "app.js",
     "scripts": {
+        "start": "node .",
         "test": "echo \"Error: no test specified\" && exit 1",
         "serve": "nodemon server.js"
     },
@@ -11,11 +12,11 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "express": "^4.17.1",
-        "nodemon": "^2.0.6",
-        "mysql": "^2.18.1"
+        "nodemon": "^2.0.6"
     },
     "dependencies": {
-        "body-parser": "^1.19.0"
+        "body-parser": "^1.19.0",
+        "mysql": "^2.18.1",
+        "express": "^4.17.1"
     }
 }
