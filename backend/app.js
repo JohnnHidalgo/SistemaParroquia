@@ -8,11 +8,12 @@ app.use(bodyParser.json());
 
 // MySql
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'Angular',
-    database: 'parroquia',
-    port: 3307,
+    host: 'us-cdbr-east-02.cleardb.com',
+    user: 'b188da1c23515d',
+    password: '13024d4e',
+    database: 'heroku_3f3bac3fbcbbd09',
 });
+
 
 // Route
 app.get('/', (req, res) => {
