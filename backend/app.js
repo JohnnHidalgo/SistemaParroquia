@@ -1,20 +1,31 @@
 const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
-const PORT = process.env.PORT || 3050;
+const PORT = process.env.PORT /*|| 3050 */ ;
 const app = express();
 
 app.use(bodyParser.json());
 
 // MySql
+var db_config = {
+    host: 'us-cdbr-east-02.cleardb.com',
+    user: 'b188da1c23515d',
+    password: '13024d4e',
+    database: 'heroku_3f3bac3fbcbbd09',
+};
+
+/*
 const connection = mysql.createConnection({
     host: 'us-cdbr-east-02.cleardb.com',
     user: 'b188da1c23515d',
     password: '13024d4e',
     database: 'heroku_3f3bac3fbcbbd09',
 });
+*/
 
+var connection;
 // Route
+connection = mysql.createConnection(db_config);
 app.get('/', (req, res) => {
     res.send('Welcome to my API!');
 });
