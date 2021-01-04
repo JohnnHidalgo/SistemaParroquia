@@ -1,0 +1,9 @@
+{
+    "mysql": {
+        "host": "35.184.255.163",
+        "port": "3306",
+        "user": "usuariosistemaparroquia",
+        "pass": "",
+        "database": "parroquia"
+    }
+}
