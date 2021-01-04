@@ -4,38 +4,31 @@ const dataModels = require('../models/document.model')
 const connection = require('../../config/connection')
 
 
-/*
-async function getDocument(req, res) {
-    dataModels.getCars((data, error) => {
-        // 404 500
+function getDocuments(req, res) {
+    dataModels.getDocuments((data, error) => {
         res.json(data)
     })
 }
-*/
-
-function getDocuments(req, res) {
-    res.json({ message: 'los carros' })
-}
 
 
-function getOneCar(req, res) {
+function getOneDocument(req, res) {
     console.log("id : ", req.params)
     const { id } = req.params
-    dataModels.getOneCar(id, (data, error) => {
+    dataModels.getOneDocument(id, (data, error) => {
         res.json(data)
     })
 }
 
-function addCar(req, res) {
+function addDocument(req, res) {
 
-    const { marca, descripcion } = req.body
-    console.log(`carros : ${marca}, ${descripcion}`)
-    dataModels.addCar({ marca, descripcion }, (data, error) => {
+    const { title, tx_user, tx_date } = req.body
+    console.log(`document : ${title}, ${tx_user}, ${tx_date}`)
+    dataModels.addDocument({ title, tx_user, tx_date }, (data, error) => {
         res.json(data)
     })
 }
 
-function editCar(req, res) {
+function editDocument(req, res) {
     const { id } = req.params
     const { marca, descripcion } = req.body
     dataModels.editCar({ id, marca, descripcion }, (data, error) => {
@@ -43,7 +36,7 @@ function editCar(req, res) {
     })
 }
 
-function deleteCar(req, res) {
+function deleteDocument(req, res) {
     const { id } = req.params
     dataModels.deleteCar(id, (data, error) => {
         res.json(data)
@@ -52,8 +45,8 @@ function deleteCar(req, res) {
 }
 module.exports = {
     getDocuments,
-    getOneCar,
-    addCar,
-    editCar,
-    deleteCar
+    getOneDocument,
+    addDocument,
+    editDocument,
+    deleteDocument
 }

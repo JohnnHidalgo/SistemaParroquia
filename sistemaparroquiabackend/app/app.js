@@ -14,6 +14,6 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 // Routes
-app.use(require('./routes/cars.route'))
+app.use(require('./routes/document.route'))
 
 module.exports = app

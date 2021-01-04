@@ -1,17 +1,17 @@
 'use strict'
 
 const route = require('express').Router()
-const { getDocuments, getOneCar, addCar, editCar, deleteCar } = require('../controllers/document.controller')
+const { getDocuments, getOneDocument, addDocument, editDocument, deleteDocument } = require('../controllers/document.controller')
 
 route.route('/').get(getDocuments)
 
-route.route('/:id').get(getOneCar)
+route.route('/:id').get(getOneDocument)
 
-route.route('/').post(addCar)
+route.route('/').post(addDocument)
 
-route.route('/:id').put(editCar)
+route.route('/:id').put(editDocument)
 
-route.route('/:id').delete(deleteCar)
+route.route('/:id').delete(deleteDocument)
 
 
 module.exports = route
