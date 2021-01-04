@@ -26,36 +26,35 @@ var dataModels = {
     },
     addDocument: (data, callback) => {
 
-            if (connection) {
-                let sql = `insert into document(title,tx_user,tx_date) values (${connection.escape(data.title)}, ${connection.escape(data.tx_user)}, ${connection.escape(data.tx_host)})`
+        if (connection) {
+            let sql = `insert into document(title,tx_user,tx_date) values (${connection.escape(data.title)}, ${connection.escape(data.tx_user)}, ${connection.escape(data.tx_host)})`
 
+            connection.query(sql, (error, rows) => {
+                if (error) throw error
+                callback({ message: 'documento insertado' })
+            })
+        }
+    },
+    editDocument: (data, callback) => {
+            if (connection) {
+                let sql = `update document set title = ${connection.escape(data.title)} where iddocument = ${connection.escape(data.iddocument)}`
                 connection.query(sql, (error, rows) => {
                     if (error) throw error
-                    callback({ message: 'carro insertado' })
+                    callback({ message: 'document actualizado' })
                 })
             }
         }
         /*,
-                            editDocument: (data, callback) => {
-                                if (connection) {
-                                    let sql = `update cars set marca = ${connection.escape(data.marca)}, descripcion = ${connection.escape(data.descripcion)} where id = ${connection.escape(data.id)}`
+        deleteDocument: (data, callback) => {
+            if (connection) {
+                let sql = `delete from cars where id = ${connection.escape(data)}`
 
-                                    connection.query(sql, (error, rows) => {
-                                        if (error) throw error
-                                        callback({ message: 'carro actualizado' })
-                                    })
-                                }
-                            },
-                            deleteDocument: (data, callback) => {
-                                if (connection) {
-                                    let sql = `delete from cars where id = ${connection.escape(data)}`
-
-                                    connection.query(sql, (error, rows) => {
-                                        if (error) throw error
-                                        callback({ message: 'carro eliminado' })
-                                    })
-                                }
-                            }*/
+                connection.query(sql, (error, rows) => {
+                    if (error) throw error
+                    callback({ message: 'carro eliminado' })
+                })
+            }
+        }*/
 }
 
 module.exports = dataModels

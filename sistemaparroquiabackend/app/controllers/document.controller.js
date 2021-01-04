@@ -29,9 +29,9 @@ function addDocument(req, res) {
 }
 
 function editDocument(req, res) {
-    const { id } = req.params
-    const { marca, descripcion } = req.body
-    dataModels.editCar({ id, marca, descripcion }, (data, error) => {
+    const { iddocument } = req.params
+    const { title } = req.body
+    dataModels.editDocument({ iddocument, title }, (data, error) => {
         res.json(data)
     })
 }
