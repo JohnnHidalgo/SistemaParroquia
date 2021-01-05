@@ -3,15 +3,15 @@
 const route = require('express').Router()
 const { getDocuments, getOneDocument, addDocument, editDocument, deleteDocument } = require('../controllers/document.controller')
 
-route.route('/').get(getDocuments)
+route.route('/document/').get(getDocuments)
 
-route.route('/:id').get(getOneDocument)
+route.route('/document/:iddocument').get(getOneDocument)
 
-route.route('/').post(addDocument)
+route.route('/document/').post(addDocument)
 
-route.route('/:id').put(editDocument)
+route.route('/document/:iddocument').put(editDocument)
 
-route.route('/:id').delete(deleteDocument)
+route.route('/document/update/:iddocument').put(deleteDocument)
 
 
 module.exports = route

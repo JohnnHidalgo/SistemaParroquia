@@ -21,9 +21,9 @@ function getOneDocument(req, res) {
 
 function addDocument(req, res) {
 
-    const { title, tx_user, tx_date } = req.body
-    console.log(`document : ${title}, ${tx_user}, ${tx_date}`)
-    dataModels.addDocument({ title, tx_user, tx_date }, (data, error) => {
+    const { title, tx_user, tx_date, active } = req.body
+    console.log(`document : ${title}, ${tx_user}, ${tx_date}, ${active}`)
+    dataModels.addDocument({ title, tx_user, tx_date, active }, (data, error) => {
         res.json(data)
     })
 }
@@ -37,8 +37,8 @@ function editDocument(req, res) {
 }
 
 function deleteDocument(req, res) {
-    const { id } = req.params
-    dataModels.deleteCar(id, (data, error) => {
+    const { iddocument } = req.params
+    dataModels.deleteDocument(iddocument, (data, error) => {
         res.json(data)
     })
 
