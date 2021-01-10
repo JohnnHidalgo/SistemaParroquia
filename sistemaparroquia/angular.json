@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "sistemaparroquia"
+  "defaultProject": "sistemaparroquia",
+  "cli": {
+    "analytics": "8894f472-063c-4d21-b4be-cab0c2effdab"
+  }
 }
