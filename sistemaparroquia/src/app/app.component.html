@@ -16,7 +16,7 @@
 
     <mat-sidenav class="side-nav" #sidenav [opened]="screenWidth>840" [mode]="(screenWidth>840)?'side':'over'" position="start">
         <div class="container">
-            <span>Aqui los botones</span>
+            <span>Menú</span>
         </div>
         <hr>
 
@@ -25,12 +25,41 @@
                 <!--a mat-list-item [routerLink]="['home']">Dashboard</a-->
                 <mat-list-item class="mat-item-hover">
                     <mat-icon class="icon-padding">dashboard</mat-icon>
-                    <p class="text-padding">home</p>
+                    <p class="text-padding">Registro</p>
                 </mat-list-item>
+
                 <mat-list-item class="mat-item-hover">
                     <mat-icon class="icon-padding">dashboard</mat-icon>
-                    <p class="text-padding">Desing</p>
+                    <p class="text-padding">Catecumenos</p>
                 </mat-list-item>
+
+                <mat-list-item class="mat-item-hover">
+                    <mat-icon class="icon-padding">dashboard</mat-icon>
+                    <p class="text-padding">Catequistas</p>
+                </mat-list-item>
+
+                <mat-list-item class="mat-item-hover">
+                    <mat-icon class="icon-padding">dashboard</mat-icon>
+                    <p class="text-padding">Ventas</p>
+                </mat-list-item>
+
+                <mat-list-item class="mat-item-hover">
+                    <mat-icon class="icon-padding">dashboard</mat-icon>
+                    <p class="text-padding">Productos</p>
+                </mat-list-item>
+                <!--a mat-list-item [routerLink]="['home']">Dashboard</a-->
+
+                <mat-list-item [routerLink]="['documentlist']" class="mat-item-hover">
+                    <mat-icon class="icon-padding">dashboard</mat-icon>
+                    <p class="text-padding">Documentos</p>
+                </mat-list-item>
+
+                <mat-list-item [routerLink]="['documentadd']" class="mat-item-hover">
+                    <mat-icon class="icon-padding">dashboard</mat-icon>
+                    <p class="text-padding">Materiales</p>
+                </mat-list-item>
+
+
             </mat-nav-list>
 
 

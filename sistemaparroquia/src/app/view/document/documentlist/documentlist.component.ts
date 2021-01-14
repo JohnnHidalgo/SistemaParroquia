@@ -41,4 +41,11 @@ export class DocumentlistComponent implements OnInit {
 
 
 
+  goAddDocument(){
+    this.router.navigate(["documentadd"])
+  }
+
+
+
+
 }

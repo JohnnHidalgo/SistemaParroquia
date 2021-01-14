@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Document } from 'src/app/model/document';
+import { CreateDocument,Document } from 'src/app/model/document';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +20,11 @@ export class ServiceService {
     return this.http.get<any>(this.mainUrl+iddocument);
   }
 
-  createDocument(document:Document){
-    return this.http.post<Document>(this.mainUrl,document);
+  createDocument(document:any){
+    console.log("SERVICE")
+    console.log(document)
+    console.log(this.mainUrl)
+    return this.http.post<any>(this.mainUrl,document);
   }
   
   //apptset.put('/document/:iddocument', editDocument);

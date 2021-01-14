@@ -17,12 +17,6 @@ export class AppComponent {
     };
   }
 
-
-
-
-
-
-
   listdocument(){
     this.router.navigate(["documentlist"]);
   }
@@ -31,6 +25,3 @@ export class AppComponent {
     this.router.navigate(["documentadd"]);
   }
 }
-
-
-
