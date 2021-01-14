@@ -3,15 +3,7 @@
 const dataModels = require('../models/document.model')
 const connection = require('../../config/connection')
 
-const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-
 function getDocuments(req, res, next) {
-    const http = new XMLHttpRequest();
-    const url = 'https://jsonplaceholder.typicode.com/posts';
-    // Postman Mock
-    //const url = '...';
-    http.open("GET", url);
-    http.send();
     dataModels.getDocuments((data, error) => {
         res.json(data)
     })
