@@ -17,7 +17,7 @@ function getOnePerson(req, res) {
     })
 }
 
-function addDocument(req, res) {
+function addPerson(req, res) {
     const { lastname, secondlastname, firstname, secondname, dateborn, address, zone, phone, cellphone, recibo, idcatequesistype, tx_user, tx_date, active } = req.body
     personModels.addPerson({ lastname, secondlastname, firstname, secondname, dateborn, address, zone, phone, cellphone, recibo, idcatequesistype, tx_user, tx_date, active }, (data, error) => {
         res.json(data)
