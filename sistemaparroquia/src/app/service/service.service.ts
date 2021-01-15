@@ -27,7 +27,6 @@ export class ServiceService {
     return this.http.post<any>(this.mainUrl,document);
   }
   
-  //apptset.put('/document/:iddocument', editDocument);
   updateDocument(document:Document){
     return this.http.put<Document>(this.mainUrl+document.iddocument,document);
   }

@@ -35,11 +35,6 @@ export class DocumentlistComponent implements OnInit {
     this.dialog.open(DeletedocumentComponent);
 
   }
-  DeleteDocument(){
-    console.log("DELETE");
-  }
-
-
 
   goAddDocument(){
     this.router.navigate(["documentadd"])

@@ -1,1 +1,16 @@
-<p>materialadd works!</p>
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Registro</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Título:</label>
+                    <input [(ngModel)]="material.title" name="title" type="text" class="form-control">
+                </div>
+                <button (click)="createMaterial()" class="btn btn-danger">Agregar</button>
+            </form>
+        </div>
+    </div>
+</div>

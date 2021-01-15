@@ -19,6 +19,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { DeletematerialComponent } from './dialog/deletematerial/deletematerial.component';
+import { PersonaddComponent } from './view/person/personadd/personadd.component';
+import { PersoneditComponent } from './view/person/personedit/personedit.component';
+import { PersonlistComponent } from './view/person/personlist/personlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MateriallistComponent,
     MaterialaddComponent,
     MaterialeditComponent,
-    DeletedocumentComponent
+    DeletedocumentComponent,
+    DeletematerialComponent,
+    PersonaddComponent,
+    PersoneditComponent,
+    PersonlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +51,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatToolbarModule
   ],
   entryComponents:[
-    DeletedocumentComponent
+    DeletedocumentComponent,
+    DeletematerialComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
