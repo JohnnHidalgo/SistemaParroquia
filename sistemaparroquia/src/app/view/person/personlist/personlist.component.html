@@ -7,10 +7,13 @@
         </div>
 
         <div class="card-body" style=" height:450px; overflow:auto;">
+            <label for="search">Buscar</label>
+            <input type="text" [(ngModel)]="searchValue" id="search" />
             <table class="table table-hover" cellspacing="0" cellpadding="1">
                 <thead>
                     <tr class="text-center">
                         <th>ID</th>
+                        <th>APELLIDO</th>
                         <th>APELLIDOS</th>
                         <th>NOMBRES</th>
                         <th>FECHA NAC.</th>
@@ -24,8 +27,9 @@
                 </thead>
                 <tbody>
                     <td></td>
-                    <tr *ngFor="let person of persons" class="text-center">
+                    <tr *ngFor="let person of persons | searchPerson:searchValue" class="text-center ">
                         <td>{{person.idperson}}</td>
+                        <td>{{person.lastname}} </td>
                         <td>{{person.lastname}} {{person.secondlastname}}</td>
                         <td>{{person.firstname}} {{person.secondname}}</td>
                         <td>{{person.dateborn}}</td>
@@ -47,10 +51,4 @@
             </table>
         </div>
     </div>
-</div>
-
-
-<div>
-    <p>Author: Johnn Hidalgo</p>
-    <p><a href="mailto:hege@example.com">hege@example.com</a></p>
 </div>

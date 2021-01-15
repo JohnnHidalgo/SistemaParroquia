@@ -13,7 +13,8 @@ export class PersonlistComponent implements OnInit {
 
 
   persons: ListPerson[]=[];
-
+  searchValue:String="";
+  
   constructor(private http: PersonserviceService, private router: Router, public dialog:MatDialog) { }
 
   ngOnInit(): void {

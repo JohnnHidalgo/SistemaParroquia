@@ -23,6 +23,7 @@ import { DeletematerialComponent } from './dialog/deletematerial/deletematerial.
 import { PersonaddComponent } from './view/person/personadd/personadd.component';
 import { PersoneditComponent } from './view/person/personedit/personedit.component';
 import { PersonlistComponent } from './view/person/personlist/personlist.component';
+import { SearchPersonPipe } from './seekes/searchperson/search-person.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { PersonlistComponent } from './view/person/personlist/personlist.compone
     PersonaddComponent,
     PersoneditComponent,
     PersonlistComponent,
+    SearchPersonPipe,
   ],
   imports: [
     BrowserModule,
