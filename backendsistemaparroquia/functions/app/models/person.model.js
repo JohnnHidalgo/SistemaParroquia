@@ -5,9 +5,7 @@ const connection = require('../../config/connection')
 var personModels = {
     getPersons: (callback) => {
         if (connection) {
-            let sql = `select a.lastname,a.secondlastname,a.firstname,a.secondname,a.dateborn,a.address,a.zone,a.phone,a.cellphone,a.recibo,b.catequesistype,a.tx_user,a.tx_date,a.active
-            from person a, catequesistype b
-            where a.idcatequesistype=b.idcatequesistype and a.active=true;`
+            let sql = `select a.idperson,a.lastname,a.secondlastname,a.firstname,a.secondname,a.dateborn,a.address,a.zone,a.phone,a.cellphone,a.recibo,b.catequesistype,a.tx_user,a.tx_date,a.active from person a, catequesistype b where a.idcatequesistype=b.idcatequesistype and a.active=true;`
             connection.query(sql, (error, rows) => {
                 if (error) throw error
                 callback(rows)
