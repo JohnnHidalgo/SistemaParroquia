@@ -61,11 +61,12 @@
 
                 <div class="form-group">
                     <label for="">Tipo de Catequesis:</label>
-                    <input [(ngModel)]="persona.idcatequesistype" name="idcatequesistype" type="text" class="form-control">
+                    <select [(ngModel)]="persona.idcatequesistype" name="idcatequesistype" class="form-control">
+                        <option *ngFor="let catequesisType of catequesisType" >{{catequesisType.catequesistype}}</option>
+                    </select>
                 </div>
-
-
                 <button (click)="createPerson()" class="btn btn-danger">Agregar</button>
+
             </form>
         </div>
     </div>
