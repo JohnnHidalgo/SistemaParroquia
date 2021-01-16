@@ -9,7 +9,7 @@ import { DocumenteditComponent } from './view/document/documentedit/documentedit
 import { MateriallistComponent } from './view/material/materiallist/materiallist.component';
 import { MaterialaddComponent } from './view/material/materialadd/materialadd.component';
 import { MaterialeditComponent } from './view/material/materialedit/materialedit.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -17,13 +17,13 @@ import { DeletedocumentComponent } from './dialog/deletedocument/deletedocument.
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DeletematerialComponent } from './dialog/deletematerial/deletematerial.component';
 import { PersonaddComponent } from './view/person/personadd/personadd.component';
 import { PersoneditComponent } from './view/person/personedit/personedit.component';
 import { PersonlistComponent } from './view/person/personlist/personlist.component';
 import { SearchPersonPipe } from './seekes/searchperson/search-person.pipe';
+import { DeletepersonComponent } from './dialog/deleteperson/deleteperson.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +39,7 @@ import { SearchPersonPipe } from './seekes/searchperson/search-person.pipe';
     PersoneditComponent,
     PersonlistComponent,
     SearchPersonPipe,
+    DeletepersonComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +55,8 @@ import { SearchPersonPipe } from './seekes/searchperson/search-person.pipe';
   ],
   entryComponents:[
     DeletedocumentComponent,
-    DeletematerialComponent
+    DeletematerialComponent,
+    DeletepersonComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

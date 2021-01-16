@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { DeletepersonComponent } from 'src/app/dialog/deleteperson/deleteperson.component';
 import { ListPerson, Person } from 'src/app/model/person';
 import { PersonserviceService } from 'src/app/service/PersonService/personservice.service';
 
@@ -35,7 +36,7 @@ export class PersonlistComponent implements OnInit {
 
   openDialog(person:Person){
     localStorage.setItem("idperson",person.idperson.toString());
-    //this.dialog.open(DeletematerialComponent);
+    this.dialog.open(DeletepersonComponent);
 
   }
 

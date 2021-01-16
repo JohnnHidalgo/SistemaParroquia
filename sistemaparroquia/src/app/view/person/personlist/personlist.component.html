@@ -13,7 +13,6 @@
                 <thead>
                     <tr class="text-center">
                         <th>ID</th>
-                        <th>APELLIDO</th>
                         <th>APELLIDOS</th>
                         <th>NOMBRES</th>
                         <th>FECHA NAC.</th>
@@ -29,7 +28,6 @@
                     <td></td>
                     <tr *ngFor="let person of persons | searchPerson:searchValue" class="text-center ">
                         <td>{{person.idperson}}</td>
-                        <td>{{person.lastname}} </td>
                         <td>{{person.lastname}} {{person.secondlastname}}</td>
                         <td>{{person.firstname}} {{person.secondname}}</td>
                         <td>{{person.dateborn}}</td>
