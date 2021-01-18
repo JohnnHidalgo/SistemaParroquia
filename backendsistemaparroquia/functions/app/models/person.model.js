@@ -22,6 +22,17 @@ var personModels = {
             })
         }
     },
+    getOnePersonCatequesis: (data, callback) => {
+        console.log(`el idperson : ${data}`)
+        if (connection) {
+            let sql = `select a.idperson,a.lastname,a.secondlastname,a.firstname,a.secondname,a.dateborn,a.address,a.zone,a.phone,a.cellphone,a.recibo,b.catequesistype,a.tx_user,a.tx_date,a.active from person a, catequesistype b where idperson = ${connection.escape(data.idperson)} and a.idcatequesistype=b.idcatequesistype and a.active=true;`
+
+            connection.query(sql, (error, rows) => {
+                if (error) throw error
+                callback(rows)
+            })
+        }
+    },
     addPerson: (data, callback) => {
         if (connection) {
             let sql = `insert into person(lastname,secondlastname,firstname,secondname,dateborn,address,zone,phone,cellphone,recibo,idcatequesistype,tx_user,tx_date,active) values (${connection.escape(data.lastname)}, ${connection.escape(data.secondlastname)}, ${connection.escape(data.firstname)},${connection.escape(data.secondname)}, ${connection.escape(data.dateborn)}, ${connection.escape(data.address)},${connection.escape(data.zone)}, ${connection.escape(data.phone)}, ${connection.escape(data.cellphone)},${connection.escape(data.recibo)}, ${connection.escape(data.idcatequesistype)}, ${connection.escape(data.tx_user)},${connection.escape(data.tx_date)}, ${connection.escape(data.active)})`

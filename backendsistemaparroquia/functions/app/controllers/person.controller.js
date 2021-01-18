@@ -17,6 +17,14 @@ function getOnePerson(req, res) {
     })
 }
 
+function getOnePersonCatequesis(req, res) {
+    console.log("id : ", req.params)
+    const { idperson } = req.params
+    personModels.getOnePersonCatequesis({ idperson }, (data, error) => {
+        res.json(data)
+    })
+}
+
 function addPerson(req, res) {
     const { lastname, secondlastname, firstname, secondname, dateborn, address, zone, phone, cellphone, recibo, idcatequesistype, tx_user, tx_date, active } = req.body
     personModels.addPerson({ lastname, secondlastname, firstname, secondname, dateborn, address, zone, phone, cellphone, recibo, idcatequesistype, tx_user, tx_date, active }, (data, error) => {
@@ -42,6 +50,7 @@ function deletePerson(req, res) {
 module.exports = {
     getPersons,
     getOnePerson,
+    getOnePersonCatequesis,
     addPerson,
     editPerson,
     deletePerson
