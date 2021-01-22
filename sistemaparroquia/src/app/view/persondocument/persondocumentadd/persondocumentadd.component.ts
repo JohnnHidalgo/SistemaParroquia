@@ -57,10 +57,5 @@ export class PersondocumentaddComponent implements OnInit {
     });
   }
 
-  createPersonDocumentTest(){  
-    console.log("create Persom")
-    
-  }
-
 
 }

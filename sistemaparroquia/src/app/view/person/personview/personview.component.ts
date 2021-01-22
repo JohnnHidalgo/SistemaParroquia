@@ -4,7 +4,9 @@ import { Router } from '@angular/router';
 import { DeletepersondocumentComponent } from 'src/app/dialog/deletepersondocument/deletepersondocument.component';
 import { Person,ListPerson } from 'src/app/model/person';
 import { PersonDocument } from 'src/app/model/persondocument';
+import { PersonMaterial } from 'src/app/model/personmaterial';
 import { PersondocumentService } from 'src/app/service/PersonDocumentService/persondocument.service';
+import { PersonmaterialService } from 'src/app/service/PersonMaterialService/personmaterial.service';
 import { PersonserviceService } from 'src/app/service/PersonService/personservice.service';
 
 @Component({
@@ -14,15 +16,18 @@ import { PersonserviceService } from 'src/app/service/PersonService/personservic
 })
 export class PersonviewComponent implements OnInit {
 
-  constructor(private router:Router,private service:PersonserviceService, private documentService: PersondocumentService, public dialog:MatDialog) { }
+  constructor(private router:Router,private service:PersonserviceService, private documentService: PersondocumentService, public dialog:MatDialog, private materialService:PersonmaterialService) { }
 
   ngOnInit(): void {
     this.getPerson();
     this.getDocuments();
+    this.getMaterials();
   }
 
   persona = new ListPerson(1,'','','','',new Date(),'','','','','','','',new Date(),true)
   documentList :PersonDocument[]=[];
+
+  materialList :PersonMaterial[]=[];
 
   getPerson(){
     const id = localStorage.getItem("idperson")|| '{}';  
@@ -41,6 +46,14 @@ export class PersonviewComponent implements OnInit {
     })
   }
 
+  getMaterials(){
+    const id = localStorage.getItem("idperson")|| '{}';
+    this.materialService.getMaterialsByPerson(+id)
+    .subscribe(data=>{
+      this.materialList=data;
+    })
+  }
+
   deleteDocument(document:PersonDocument){
     console.log(document)
     console.log(document.idpersondocument)
@@ -48,8 +61,17 @@ export class PersonviewComponent implements OnInit {
     this.dialog.open(DeletepersondocumentComponent);
   }
 
+  deleteMaterial(material:PersonMaterial){
+    console.log(material)
+  }
+
   goAddPersonDocument(){
     this.router.navigate(["persondocumentadd"]);
+  }
+
+  
+  goAddPersonMaterial(){
+    this.router.navigate(["personmaterialadd"]);
   }
 
 }
