@@ -18,6 +18,9 @@ export class PersonserviceService {
   getOnePerson(idperson:number){  
     return this.http.get<any>(this.mainUrl+idperson);
   }
+  getOnePersonCatequesis(idperson:number){  
+    return this.http.get<any>(this.mainUrl+"catequesis/"+idperson);
+  }
 
   createPerson(person:any){
     console.log("SERVICE")

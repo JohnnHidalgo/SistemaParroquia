@@ -28,9 +28,9 @@ export class PersonlistComponent implements OnInit {
 
 
 
-  EditMaterial(person:Person){
+  ViewPersona(person:Person){
     localStorage.setItem("idperson",person.idperson.toString());
-    this.router.navigate(["personedit"])
+    this.router.navigate(["personview"])
   }
 
 

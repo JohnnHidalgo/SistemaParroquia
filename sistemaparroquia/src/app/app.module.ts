@@ -24,6 +24,13 @@ import { PersoneditComponent } from './view/person/personedit/personedit.compone
 import { PersonlistComponent } from './view/person/personlist/personlist.component';
 import { SearchPersonPipe } from './seekes/searchperson/search-person.pipe';
 import { DeletepersonComponent } from './dialog/deleteperson/deleteperson.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { PersonviewComponent } from './view/person/personview/personview.component';
+import { DeletepersondocumentComponent } from './dialog/deletepersondocument/deletepersondocument.component';
+import { PersondocumentaddComponent } from './view/persondocument/persondocumentadd/persondocumentadd.component';
+import { PersonmaterialaddComponent } from './view/personmaterial/personmaterialadd/personmaterialadd.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +47,10 @@ import { DeletepersonComponent } from './dialog/deleteperson/deleteperson.compon
     PersonlistComponent,
     SearchPersonPipe,
     DeletepersonComponent,
+    PersonviewComponent,
+    DeletepersondocumentComponent,
+    PersondocumentaddComponent,
+    PersonmaterialaddComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,12 +62,15 @@ import { DeletepersonComponent } from './dialog/deleteperson/deleteperson.compon
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   entryComponents:[
     DeletedocumentComponent,
     DeletematerialComponent,
-    DeletepersonComponent
+    DeletepersonComponent,
+    DeletepersondocumentComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

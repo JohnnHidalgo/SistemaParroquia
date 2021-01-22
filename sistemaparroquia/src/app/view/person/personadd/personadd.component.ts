@@ -33,6 +33,7 @@ export class PersonaddComponent implements OnInit {
       console.log(this.catequesisTypeToCreate.idcatequesistype);
       this.persona.idcatequesistype = this.catequesisTypeToCreate.idcatequesistype;
       console.log(this.persona)
+      
       this.service.createPerson(this.persona)
       .subscribe(data=>{
         alert("Creación Exitosa");

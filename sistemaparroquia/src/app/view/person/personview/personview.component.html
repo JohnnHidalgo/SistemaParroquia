@@ -1,0 +1,91 @@
+<div class="container col-md-10" style=" height:550px; overflow:auto;">
+    <div class="card">
+        <div class="card-header">
+            <h3>Detalle</h3>
+        </div>
+
+        <div class="card-body ">
+            <div class=" form-group ">
+                <label for=" ">Apellido Paterno:</label>
+                <label for=" " class="col-md-6 ">{{persona.lastname}}</label>
+            </div>
+            <div class="form-group ">
+                <label for=" ">Apellido Materno:</label>
+                <label for=" " class="col-md-6 ">{{persona.secondlastname}}</label>
+            </div>
+            <div class="form-group ">
+                <label for=" ">Nombre:</label>
+                <label for=" " class="col-md-6 ">{{persona.firstname}}</label>
+            </div>
+
+            <div class="form-group ">
+                <label for=" ">Segundo Nombre:</label>
+                <label for=" " class="col-md-6 ">{{persona.secondname}}</label>
+            </div>
+            <div class="form-group ">
+                <label for=" ">Fecha de Nacimiento:</label>
+                <label for=" " class="col-md-6 ">{{persona.dateborn}}</label>
+            </div>
+            <div class="form-group ">
+                <label for=" ">Dirección:</label>
+                <label for=" " class="col-md-6 ">{{persona.address}}</label>
+            </div>
+            <div class="form-group ">
+                <label for=" ">Zona:</label>
+                <label for=" " class="col-md-6 ">{{persona.zone}}</label>
+            </div>
+            <div class="form-group ">
+                <label for=" ">Teléfono:</label>
+                <label for=" " class="col-md-6 ">{{persona.phone}}</label>
+            </div>
+            <div class="form-group ">
+                <label for=" ">Celular:</label>
+                <label for=" " class="col-md-6 ">{{persona.cellphone}}</label>
+            </div>
+            <div class="form-group ">
+                <label for=" ">Recibo:</label>
+                <label for=" " class="col-md-6 ">{{persona.recibo}}</label>
+            </div>
+            <div class="form-group ">
+                <label for=" ">Catequesis:</label>
+                <label for=" " class="col-md-6 ">{{persona.catequesistype}}</label>
+            </div>
+        </div>
+
+
+        <table>
+
+            <tr>
+                <td class="card-header">Documentos
+                    <button (click)="goAddPersonDocument()" class="btn btn-warning">Agregar Nuevo</button></td>
+
+                <td class="card-header">Material
+                    <button class="btn btn-warning">Agregar Nuevo</button></td>
+            </tr>
+
+            <tr *ngFor="let document of documentList">
+                <td>{{document.title}} (-----) ({{document.documentdate}})<button (click)="deleteDocument(document)" class="btn btn-danger">Quitar</button></td>
+
+                <td class="card-body ">Celda 5</td>
+            </tr>
+        </table>
+
+        <div class="card-header ">
+            <h3>Padres o Apoderados</h3>
+        </div>
+
+        <div class="card-body ">
+        </div>
+
+
+        <div class="card-header ">
+            <h3>Padrinos</h3>
+        </div>
+
+        <div class="card-body ">
+        </div>
+
+
+
+    </div>
+</div>

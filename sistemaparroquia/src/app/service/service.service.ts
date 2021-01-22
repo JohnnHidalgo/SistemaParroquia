@@ -35,21 +35,5 @@ export class ServiceService {
     return this.http.put<Document>(this.mainUrl+"delete/"+document.iddocument,document);
   }
 
-  /*
-  createUser(document:Document){
-    return this.http.post<Document>(this.baseUrl+"/adduser/",document);
-  }
-  getUserId(id:number){
-    return this.http.get<Document>(this.baseUrl+"/idUser/"+id);
-  }
-
-  updateUser(document:Document){
-    return this.http.put<Document>(this.baseUrl+"/"+document.idUser,document);
-  }
-  deleteUser(document:Document){
-    return this.http.put<Document>(this.baseUrl+"/"+user.idUser,document);
-  }
-
-*/
 
 }
