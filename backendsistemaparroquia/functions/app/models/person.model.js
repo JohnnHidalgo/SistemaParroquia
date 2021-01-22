@@ -44,8 +44,7 @@ var personModels = {
     },
     editPerson: (data, callback) => {
         if (connection) {
-            let sql = `update person set lastname = ${connection.escape(data.lastname)},
-            lastname = ${connection.escape(data.lastname)},secondlastname = ${connection.escape(data.secondlastname)},firstname = ${connection.escape(data.firstname)},secondname = ${connection.escape(data.secondname)},dateborn = ${connection.escape(data.dateborn)},address = ${connection.escape(data.address)},zone = ${connection.escape(data.zone)},phone = ${connection.escape(data.phone)},cellphone = ${connection.escape(data.cellphone)},recibo = ${connection.escape(data.recibo)},idcatequesistype = ${connection.escape(data.idcatequesistype)},tx_user = ${connection.escape(data.tx_user)},tx_date = ${connection.escape(data.tx_date)},active = ${connection.escape(data.active)}where idperson = ${connection.escape(data.idperson)}`
+            let sql = `update person set lastname = ${connection.escape(data.lastname)}, lastname = ${connection.escape(data.lastname)},secondlastname = ${connection.escape(data.secondlastname)},firstname = ${connection.escape(data.firstname)},secondname = ${connection.escape(data.secondname)},dateborn = ${connection.escape(data.dateborn)},address = ${connection.escape(data.address)},zone = ${connection.escape(data.zone)},phone = ${connection.escape(data.phone)},cellphone = ${connection.escape(data.cellphone)},recibo = ${connection.escape(data.recibo)},idcatequesistype = ${connection.escape(data.idcatequesistype)},tx_user = ${connection.escape(data.tx_user)},tx_date = ${connection.escape(data.tx_date)},active = ${connection.escape(data.active)}where idperson = ${connection.escape(data.idperson)}`
 
             console.log(sql);
             connection.query(sql, (error, rows) => {
