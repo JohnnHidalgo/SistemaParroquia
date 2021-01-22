@@ -12,6 +12,7 @@ apinode.use(require('./app/routes/material.routes'))
 apinode.use(require('./app/routes/person.route'))
 apinode.use(require('./app/routes/catequesistype.route'))
 apinode.use(require('./app/routes/persondocument.route'))
+apinode.use(require('./app/routes/personmaterial.route'))
 
 apinode.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
