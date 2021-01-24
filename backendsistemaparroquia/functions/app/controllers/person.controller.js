@@ -34,6 +34,10 @@ function addPerson(req, res) {
 
 function editPerson(req, res) {
     const { idperson } = req.params
+    const { lastname, secondlastname, firstname, secondname, dateborn, address, zone, phone, cellphone, recibo, idcatequesistype, tx_user, tx_date, active } = req.body
+        /*
+        Aqui falta el editar persona    
+        */
     const { title } = req.body
     personModels.editPerson({ idperson, title }, (data, error) => {
         res.json(data)
