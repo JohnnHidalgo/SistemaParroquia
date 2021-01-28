@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CatequistalistComponent } from './view/catequista/catequistalist/catequistalist.component';
 import { DocumentaddComponent } from './view/document/documentadd/documentadd.component';
 import { DocumenteditComponent } from './view/document/documentedit/documentedit.component';
 import { DocumentlistComponent } from './view/document/documentlist/documentlist.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:'parentlist',component:ParentlistComponent},
   {path:'godparentadd',component:GodparentaddComponent},
   {path:'godparentlist',component:GodparentlistComponent},
+  {path:'catequistalist',component:CatequistalistComponent},
 ];
 
 @NgModule({

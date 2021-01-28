@@ -37,6 +37,7 @@ import { GodparentaddComponent } from './view/godparent/godparentadd/godparentad
 import { DeletegodparentComponent } from './dialog/deletegodparent/deletegodparent/deletegodparent.component';
 import { GodparentlistComponent } from './view/godparent/godparentlist/godparentlist.component';
 import { ParentlistComponent } from './view/parent/parentlist/parentlist.component';
+import { CatequistalistComponent } from './view/catequista/catequistalist/catequistalist.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { ParentlistComponent } from './view/parent/parentlist/parentlist.compone
     DeletegodparentComponent,
     GodparentlistComponent,
     ParentlistComponent,
+    CatequistalistComponent
   ],
   imports: [
     BrowserModule,

@@ -11,23 +11,23 @@ export class CatequistaserviceService {
 
   mainUrl='https://us-central1-sistemaparroquia.cloudfunctions.net/sistemaparroquiabackend/catequista/';
 
-  getAllPerson(){  
+  getAllCatequistas(){  
     return this.http.get<ListCatequista[]>(this.mainUrl);
   }
   
-  getOnePerson(idcatequista:number){  
+  getOneCatequista(idcatequista:number){  
     return this.http.get<any>(this.mainUrl+idcatequista);
   }
 
-  createPerson(person:any){
-    return this.http.post<any>(this.mainUrl,person);
+  createCatequista(catequista:any){
+    return this.http.post<any>(this.mainUrl,catequista);
   }
   
-  updatePerson(catequista:Catequista){
+  updateCatequista(catequista:Catequista){
     return this.http.put<Catequista>(this.mainUrl+catequista.idcatequista,catequista);
   }
 
-  deletePerson(catequista:Catequista){
+  deleteCatequista(catequista:Catequista){
     return this.http.put<Catequista>(this.mainUrl+"delete/"+catequista.idcatequista,catequista);
   }
 }

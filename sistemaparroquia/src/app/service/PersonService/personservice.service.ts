@@ -23,9 +23,6 @@ export class PersonserviceService {
   }
 
   createPerson(person:any){
-    console.log("SERVICE")
-    console.log(person)
-    console.log(this.mainUrl)
     return this.http.post<any>(this.mainUrl,person);
   }
   
