@@ -17,6 +17,7 @@ apinode.use(require('./app/routes/parent.route'))
 apinode.use(require('./app/routes/parentperson.route'))
 apinode.use(require('./app/routes/godparent.route'))
 apinode.use(require('./app/routes/godparentperson.route'))
+apinode.use(require('./app/routes/catequista.route'))
 
 apinode.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");

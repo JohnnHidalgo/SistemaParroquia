@@ -25,7 +25,7 @@ var godparentPersonsModels = {
 
     getGodParentsByPerson: (data, callback) => {
         if (connection) {
-            let sql = `select a.iddogparenperson, a.idperson, a.idparent, b.firstname, b.secondname, b.lastname, b.secondlastname from godparentperson a, godparent b where a.idperson = ${connection.escape(data.idperson)} and a.idgodparent = b.idgodparent and a.active = true`
+            let sql = `select a.iddogparenperson, a.idperson, a.idgodparent, b.firstname, b.secondname, b.lastname, b.secondlastname from godparentperson a, godparent b where a.idperson = ${connection.escape(data.idperson)} and a.idgodparent = b.idgodparent and a.active = true`
             connection.query(sql, (error, rows) => {
                 if (error) throw error
                 callback(rows)
