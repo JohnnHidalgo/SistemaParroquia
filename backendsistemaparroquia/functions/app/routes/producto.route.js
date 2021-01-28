@@ -15,11 +15,11 @@ apptset.use(function(req, res, next) {
     next();
 });
 
-const { getDocuments, getOneDocument, addDocument, editDocument, deleteDocument } = require('../controllers/document.controller')
-apptset.get('/document/', getDocuments);
-apptset.get('/document/:iddocument', getOneDocument);
-apptset.post('/document/', addDocument);
-apptset.put('/document/:iddocument', editDocument);
-apptset.put('/document/delete/:iddocument', deleteDocument);
+const { getProducts, getOneProduct, addProduct, editProduct, deleteProduct } = require('../controllers/producto.controller')
+apptset.get('/product/', getProducts);
+apptset.get('/product/:idproducto', getOneProduct);
+apptset.post('/product/', addProduct);
+apptset.put('/product/:idproducto', editProduct);
+apptset.put('/product/delete/:idproducto', deleteProduct);
 
 module.exports = apptset
