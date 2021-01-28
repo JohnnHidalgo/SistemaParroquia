@@ -22,6 +22,10 @@ export class PersonserviceService {
     return this.http.get<any>(this.mainUrl+"catequesis/"+idperson);
   }
 
+  getOnePersonCatGroup(idperson:number){  
+    return this.http.get<any>(this.mainUrl+"catgroup/"+idperson);
+  }
+
   createPerson(person:any){
     return this.http.post<any>(this.mainUrl,person);
   }

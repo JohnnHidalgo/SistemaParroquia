@@ -15,10 +15,11 @@ apptset.use(function(req, res, next) {
 });
 
 
-const { getPersons, getOnePerson, getOnePersonCatequesis, addPerson, editPerson, deletePerson } = require('../controllers/person.controller')
+const { getPersons, getOnePerson, getOnePersonCatequesis, getOnePersonCatGroup, addPerson, editPerson, deletePerson } = require('../controllers/person.controller')
 apptset.get('/person/', getPersons);
 apptset.get('/person/:idperson', getOnePerson);
 apptset.get('/person/catequesis/:idperson', getOnePersonCatequesis);
+apptset.get('/person/catgroup/:idperson', getOnePersonCatGroup);
 apptset.post('/person/', addPerson);
 apptset.put('/person/:idperson', editPerson);
 apptset.put('/person/delete/:idperson', deletePerson);

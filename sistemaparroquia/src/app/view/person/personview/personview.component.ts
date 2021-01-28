@@ -7,7 +7,7 @@ import { DeletepersondocumentComponent } from 'src/app/dialog/deletepersondocume
 import { DeletepersonmaterialComponent } from 'src/app/dialog/deletepersonmaterial/deletepersonmaterial.component';
 import { ListGodParentPerson } from 'src/app/model/godparentperson';
 import { ParentPerson, ListParentPerson } from 'src/app/model/parentperson';
-import { Person,ListPerson } from 'src/app/model/person';
+import { Person,ListPerson, CatGroupPerson } from 'src/app/model/person';
 import { PersonDocument } from 'src/app/model/persondocument';
 import { PersonMaterial } from 'src/app/model/personmaterial';
 import { GodparentService } from 'src/app/service/godparent/godparent.service';
@@ -32,6 +32,7 @@ export class PersonviewComponent implements OnInit {
     this.getMaterials();
     this.getParents();
     this.getGodParents();
+    this.getCatGroupPerson();
   }
 
   persona = new ListPerson(1,'','','','',new Date(),'','','','','','','',new Date(),true)
@@ -39,6 +40,7 @@ export class PersonviewComponent implements OnInit {
   materialList :PersonMaterial[]=[];
   parentList :ListParentPerson[]=[];
   godparentList :ListGodParentPerson[]=[];
+  catgrouppersonList : CatGroupPerson[]=[];
 
   getPerson(){
     const id = localStorage.getItem("idperson")|| '{}';  
@@ -46,6 +48,15 @@ export class PersonviewComponent implements OnInit {
     this.service.getOnePersonCatequesis(+id)
     .subscribe(data=>{
       this.persona=data[0];
+    })
+  }
+
+
+  getCatGroupPerson(){
+    const id = localStorage.getItem("idperson")|| '{}';  
+    this.service.getOnePersonCatGroup(+id)
+    .subscribe(data=>{
+      this.catgrouppersonList=data;
     })
   }
 

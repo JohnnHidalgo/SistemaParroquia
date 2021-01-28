@@ -33,6 +33,15 @@ var personModels = {
             })
         }
     },
+    getOnePersonCatGroup: (data, callback) => {
+        if (connection) {
+            let sql = `select d.title, e.lastname, e.secondlastname, e.firstname, e.secondname, e.cellphone from personcatequistagroup c, catgroup d, catequista e where c.idcatequista=e.idcatequista and c.idperson=${connection.escape(data.idperson)} and c.idcatgroup = d.idcatgroup;`
+            connection.query(sql, (error, rows) => {
+                if (error) throw error
+                callback(rows)
+            })
+        }
+    },
     addPerson: (data, callback) => {
         if (connection) {
             let sql = `insert into person(lastname,secondlastname,firstname,secondname,dateborn,address,zone,phone,cellphone,recibo,idcatequesistype,tx_user,tx_date,active) values (${connection.escape(data.lastname)}, ${connection.escape(data.secondlastname)}, ${connection.escape(data.firstname)},${connection.escape(data.secondname)}, ${connection.escape(data.dateborn)}, ${connection.escape(data.address)},${connection.escape(data.zone)}, ${connection.escape(data.phone)}, ${connection.escape(data.cellphone)},${connection.escape(data.recibo)}, ${connection.escape(data.idcatequesistype)}, ${connection.escape(data.tx_user)},${connection.escape(data.tx_date)}, ${connection.escape(data.active)})`
