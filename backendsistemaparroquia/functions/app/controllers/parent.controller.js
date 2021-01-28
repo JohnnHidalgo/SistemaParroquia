@@ -11,8 +11,14 @@ function getParents(req, res, next) {
 
 function getOneParent(req, res) {
     console.log("id : ", req.params)
-    const { idperson } = req.params
-    parentModels.getOneParent({ idperson }, (data, error) => {
+    const { idparent } = req.params
+    parentModels.getOneParent({ idparent }, (data, error) => {
+        res.json(data)
+    })
+}
+
+function getLastId(req, res) {
+    parentModels.getLastId((data, error) => {
         res.json(data)
     })
 }
@@ -34,7 +40,7 @@ function editParent(req, res) {
 
 function deleteParent(req, res) {
     const { idparent } = req.params
-    parentModels.deleteParent(idparent, (data, error) => {
+    parentModels.deleteParent({ idparent }, (data, error) => {
         res.json(data)
     })
 }
@@ -42,6 +48,7 @@ function deleteParent(req, res) {
 module.exports = {
     getParents,
     getOneParent,
+    getLastId,
     addParent,
     editParent,
     deleteParent

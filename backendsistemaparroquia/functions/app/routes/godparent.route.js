@@ -15,13 +15,13 @@ apptset.use(function(req, res, next) {
 });
 
 
-const { getParents, getOneParent, getLastId, addParent, editParent, deleteParent } = require('../controllers/parent.controller');
+const { getGodParents, getOneGodParent, getLastId, addGodParent, editGodParent, deleteGodParent } = require('../controllers/godparent.controller');
 
-apptset.get('/parent/', getParents);
-apptset.get('/parent/:idparent', getOneParent);
-apptset.get('/parent/last/id', getLastId);
-apptset.post('/parent/', addParent);
-apptset.put('/parent/:idparent', editParent);
-apptset.put('/parent/delete/:idparent', deleteParent);
+apptset.get('/godparent/', getGodParents);
+apptset.get('/godparent/:idgodparent', getOneGodParent);
+apptset.get('/godparent/last/id', getLastId);
+apptset.post('/godparent/', addGodParent);
+apptset.put('/godparent/:idgodparent', editGodParent);
+apptset.put('/godparent/delete/:idgodparent', deleteGodParent);
 
 module.exports = apptset

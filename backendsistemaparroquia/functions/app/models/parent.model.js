@@ -22,6 +22,19 @@ var parentModels = {
             })
         }
     },
+    getLastId: (data, callback) => {
+        console.log(data);
+        console.log("ESTAMOS EN ID ");
+        if (connection) {
+            let sql = `SELECT MAX(idparent) FROM parent`
+            connection.query(sql, (error, rows) => {
+                if (error) throw error
+                callback({ message: 'este es el id' })
+                console.log(rows)
+            })
+        }
+    },
+
     addParent: (data, callback) => {
         if (connection) {
             let sql = `insert into parent(lastname,secondlastname,firstname,secondname,dateborn,phone,cellphone,tx_user,tx_date,active) values (${connection.escape(data.lastname)}, ${connection.escape(data.secondlastname)}, ${connection.escape(data.firstname)},${connection.escape(data.secondname)}, ${connection.escape(data.dateborn)}, ${connection.escape(data.phone)}, ${connection.escape(data.cellphone)}, ${connection.escape(data.tx_user)},${connection.escape(data.tx_date)}, ${connection.escape(data.active)})`
@@ -44,7 +57,7 @@ var parentModels = {
     },
     deleteParent: (data, callback) => {
         if (connection) {
-            let sql = `update parent set active = false where idparent = ${connection.escape(data)}`
+            let sql = `update parent set active = false where idparent = ${connection.escape(data.idparent)}`
             connection.query(sql, (error, rows) => {
                 if (error) throw error
                 callback({ message: 'parent eliminado' })

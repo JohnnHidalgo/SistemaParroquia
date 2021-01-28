@@ -13,6 +13,10 @@ apinode.use(require('./app/routes/person.route'))
 apinode.use(require('./app/routes/catequesistype.route'))
 apinode.use(require('./app/routes/persondocument.route'))
 apinode.use(require('./app/routes/personmaterial.route'))
+apinode.use(require('./app/routes/parent.route'))
+apinode.use(require('./app/routes/parentperson.route'))
+apinode.use(require('./app/routes/godparent.route'))
+apinode.use(require('./app/routes/godparentperson.route'))
 
 apinode.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
