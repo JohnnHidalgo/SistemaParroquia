@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Padres o Apoderados</h3>
+        </div>
+
+        <div class="card-body" style=" height:450px; overflow:auto;">
+            <label for="search">Buscar</label>
+            <input type="text" [(ngModel)]="searchValue" id="search" />
+            <table class="table table-hover" cellspacing="0" cellpadding="1">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>APELLIDOS</th>
+                        <th>NOMBRES</th>
+                        <th>FECHA NAC.</th>
+                        <th>TELÉFONO</th>
+                        <th>CELULAR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td></td>
+                    <tr *ngFor="let parent of parents | searchPerson:searchValue" class="text-center ">
+                        <td>{{parent.idparent}}</td>
+                        <td>{{parent.lastname}} {{parent.secondlastname}}</td>
+                        <td>{{parent.firstname}} {{parent.secondname}}</td>
+                        <td>{{parent.dateborn}}</td>
+                        <td>{{parent.phone}}</td>
+                        <td>{{parent.cellphone}}</td>
+                        <td>
+                            <button (click)="AgregarParentPerson(parent)" class="btn btn-warning">Asignar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -30,6 +30,13 @@ import { PersonviewComponent } from './view/person/personview/personview.compone
 import { DeletepersondocumentComponent } from './dialog/deletepersondocument/deletepersondocument.component';
 import { PersondocumentaddComponent } from './view/persondocument/persondocumentadd/persondocumentadd.component';
 import { PersonmaterialaddComponent } from './view/personmaterial/personmaterialadd/personmaterialadd.component';
+import { DeletepersonmaterialComponent } from './dialog/deletepersonmaterial/deletepersonmaterial.component';
+import { DeleteparentComponent } from './dialog/deleteparent/deleteparent.component';
+import { ParentaddComponent } from './view/parent/parentadd/parentadd.component';
+import { GodparentaddComponent } from './view/godparent/godparentadd/godparentadd.component';
+import { DeletegodparentComponent } from './dialog/deletegodparent/deletegodparent/deletegodparent.component';
+import { GodparentlistComponent } from './view/godparent/godparentlist/godparentlist.component';
+import { ParentlistComponent } from './view/parent/parentlist/parentlist.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +58,13 @@ import { PersonmaterialaddComponent } from './view/personmaterial/personmaterial
     DeletepersondocumentComponent,
     PersondocumentaddComponent,
     PersonmaterialaddComponent,
+    DeletepersonmaterialComponent,
+    DeleteparentComponent,
+    ParentaddComponent,
+    GodparentaddComponent,
+    DeletegodparentComponent,
+    GodparentlistComponent,
+    ParentlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +84,9 @@ import { PersonmaterialaddComponent } from './view/personmaterial/personmaterial
     DeletedocumentComponent,
     DeletematerialComponent,
     DeletepersonComponent,
-    DeletepersondocumentComponent
+    DeletepersondocumentComponent,
+    DeletepersonmaterialComponent,
+    DeleteparentComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

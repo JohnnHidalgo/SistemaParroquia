@@ -6,6 +6,8 @@ import { DocumentlistComponent } from './view/document/documentlist/documentlist
 import { MaterialaddComponent } from './view/material/materialadd/materialadd.component';
 import { MaterialeditComponent } from './view/material/materialedit/materialedit.component';
 import { MateriallistComponent } from './view/material/materiallist/materiallist.component';
+import { ParentaddComponent } from './view/parent/parentadd/parentadd.component';
+import { ParentlistComponent } from './view/parent/parentlist/parentlist.component';
 import { PersonaddComponent } from './view/person/personadd/personadd.component';
 import { PersoneditComponent } from './view/person/personedit/personedit.component';
 import { PersonlistComponent } from './view/person/personlist/personlist.component';
@@ -26,6 +28,8 @@ const routes: Routes = [
   {path:'personview',component:PersonviewComponent},
   {path:'persondocumentadd',component:PersondocumentaddComponent},
   {path:'personmaterialadd',component:PersonmaterialaddComponent},
+  {path:'parentadd',component:ParentaddComponent},
+  {path:'parentlist',component:ParentlistComponent},
 ];
 
 @NgModule({

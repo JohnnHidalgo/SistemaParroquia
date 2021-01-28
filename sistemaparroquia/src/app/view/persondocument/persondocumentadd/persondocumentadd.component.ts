@@ -26,7 +26,7 @@ export class PersondocumentaddComponent implements OnInit {
     
   createPersonDocument(){
     const idPerson = localStorage.getItem("idperson")|| '{}';  
-    this.personDocument.idperson=parseInt(idPerson);;
+    this.personDocument.idperson=parseInt(idPerson);
     const doc = this.personDocument.iddocument.toString();
     const iddoc = doc.split('-');
     this.personDocument.iddocument=parseInt(iddoc[0]);;
