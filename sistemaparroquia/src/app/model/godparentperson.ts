@@ -7,5 +7,5 @@ export class CreateGodParentPerson {
 }
 
 export class ListGodParentPerson {
-    constructor(public idparentperson: number,public idperson: number,public idgodparent: number, public firstname:String, public secondname:String, public lastname:String, public secondlastname:String) {}
+    constructor(public iddogparenperson: number,public idperson: number,public idgodparent: number, public firstname:String, public secondname:String, public lastname:String, public secondlastname:String) {}
 }

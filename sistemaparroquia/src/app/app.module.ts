@@ -86,7 +86,8 @@ import { ParentlistComponent } from './view/parent/parentlist/parentlist.compone
     DeletepersonComponent,
     DeletepersondocumentComponent,
     DeletepersonmaterialComponent,
-    DeleteparentComponent
+    DeleteparentComponent,
+    DeletegodparentComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

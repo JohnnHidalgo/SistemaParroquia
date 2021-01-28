@@ -10,19 +10,19 @@ export class GodparentService {
 
   mainUrl='https://us-central1-sistemaparroquia.cloudfunctions.net/sistemaparroquiabackend/godparent/';
 
-  getAllParent(){  
+  getAllGodParent(){  
     return this.http.get<GodParent[]>(this.mainUrl);
   }
-  getOneParent(idgodparent:number){  
+  getOneGodParent(idgodparent:number){  
     return this.http.get<any>(this.mainUrl+idgodparent);
   }
-  createParent(parent:any){
+  createGodParent(parent:any){
     return this.http.post<any>(this.mainUrl,parent);
   }
-  updateParent(godparent:GodParent){
+  updateGodParent(godparent:GodParent){
     return this.http.put<GodParent>(this.mainUrl+godparent.idgodparent,parent);
   }
-  deleteParent(godparent:GodParent){
+  deleteGodParent(godparent:GodParent){
     return this.http.put<GodParent>(this.mainUrl+"delete/"+godparent.idgodparent,parent);
   }
 

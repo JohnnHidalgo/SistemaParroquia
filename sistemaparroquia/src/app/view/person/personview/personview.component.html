@@ -58,7 +58,7 @@
                 <tr class="card-header">Documentos
                     <button (click)="goAddPersonDocument()" class="btn btn-warning">Agregar Nuevo</button></tr>
                 <tr *ngFor="let document of documentList">
-                    <td>{{document.title}} -- {{document.documentdate}}<button (click)="deleteDocument(document)" class="btn btn-danger">Quitar</button></td>
+                    <td><button (click)="deleteDocument(document)" class="btn btn-danger"><i class="fa fa-trash"></i></button> {{document.title}} -- {{document.documentdate}}</td>
 
                 </tr>
             </td>
@@ -66,7 +66,7 @@
                 <tr class="card-header">Material
                     <button (click)="goAddPersonMaterial()" class="btn btn-warning">Agregar Nuevo</button></tr>
                 <tr *ngFor="let material of materialList">
-                    <td>{{material.title}} <button (click)="deleteMaterial(material)" class="btn btn-danger">Quitar</button></td>
+                    <td> <button (click)="deleteMaterial(material)" class="btn btn-danger"><i class="fa fa-trash"></i></button> {{material.title}} </td>
                 </tr>
             </td>
 
@@ -95,9 +95,6 @@
                         <td>{{parents.idperson}}</td>
                         <td>{{parents.lastname}} {{parents.secondlastname}}</td>
                         <td>{{parents.firstname}} {{parents.secondname}}</td>
-
-
-
                         <td>
                             <button (click)="gotoViewParent()" class="btn btn-warning">Ver</button>
                             <button (click)="deleteParent(parents)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
@@ -109,12 +106,34 @@
 
 
         <div class="card-header ">
-            <h3>Padrinos</h3>
+            <h3>Padrinos
+                <button (click)="gotoNewGodParent()" class="btn btn-warning">Agregar Nuevo</button>
+                <button (click)="gotoViewGodParents()" class="btn btn-warning">Buscar</button>
+            </h3>
         </div>
 
         <div class="card-body ">
+            <table class="table table-hover" cellspacing="0" cellpadding="1">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>APELLIDOS</th>
+                        <th>NOMBRES</th>
+                </thead>
+                <tbody>
+                    <td></td>
+                    <tr *ngFor="let godparents of godparentList" class="text-center ">
+                        <td>{{godparents.idperson}}</td>
+                        <td>{{godparents.lastname}} {{godparents.secondlastname}}</td>
+                        <td>{{godparents.firstname}} {{godparents.secondname}}</td>
+                        <td>
+                            <button (click)="gotoViewGodParent()" class="btn btn-warning">Ver</button>
+                            <button (click)="deleteGodParent(godparents)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
 
 
     </div>

@@ -1,1 +1,38 @@
-<p>godparentlist works!</p>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Padrinos</h3>
+        </div>
+
+        <div class="card-body" style=" height:450px; overflow:auto;">
+            <label for="search">Buscar</label>
+            <input type="text" [(ngModel)]="searchValue" id="search" />
+            <table class="table table-hover" cellspacing="0" cellpadding="1">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>APELLIDOS</th>
+                        <th>NOMBRES</th>
+                        <th>FECHA NAC.</th>
+                        <th>TELÉFONO</th>
+                        <th>CELULAR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td></td>
+                    <tr *ngFor="let godparent of godparents | searchPerson:searchValue" class="text-center ">
+                        <td>{{godparent.idparent}}</td>
+                        <td>{{godparent.lastname}} {{godparent.secondlastname}}</td>
+                        <td>{{godparent.firstname}} {{godparent.secondname}}</td>
+                        <td>{{godparent.dateborn}}</td>
+                        <td>{{godparent.phone}}</td>
+                        <td>{{godparent.cellphone}}</td>
+                        <td>
+                            <button (click)="AgregarParentPerson(godparent)" class="btn btn-warning">Asignar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

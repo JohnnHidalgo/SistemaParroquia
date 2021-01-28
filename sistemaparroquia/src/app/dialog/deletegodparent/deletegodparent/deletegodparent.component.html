@@ -1,1 +1,9 @@
-<p>deletegodparent works!</p>
+<h3 mat-dialog-title>Eliminar</h3>
+<mat-dialog-content class="mat-typography">
+    <p>Está seguro de eliminar este Padrino</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onCloseDialog()" class="btn btn-warning">Cancelar</button>
+    <button mat-button (click)="deleteGodParent()" class="btn btn-warning">Eliminar</button>
+</mat-dialog-actions>
