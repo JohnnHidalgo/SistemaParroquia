@@ -38,6 +38,10 @@ import { DeletegodparentComponent } from './dialog/deletegodparent/deletegodpare
 import { GodparentlistComponent } from './view/godparent/godparentlist/godparentlist.component';
 import { ParentlistComponent } from './view/parent/parentlist/parentlist.component';
 import { CatequistalistComponent } from './view/catequista/catequistalist/catequistalist.component';
+import { CatequesislistComponent } from './view/catequesis/catequesislist/catequesislist.component';
+import { CatequesisaddComponent } from './view/catequesis/catequesisadd/catequesisadd.component';
+import { CatequesiseditComponent } from './view/catequesis/catequesisedit/catequesisedit.component';
+import { DeletecatequesistypeComponent } from './dialog/deletecatequesistype/deletecatequesistype.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +70,11 @@ import { CatequistalistComponent } from './view/catequista/catequistalist/catequ
     DeletegodparentComponent,
     GodparentlistComponent,
     ParentlistComponent,
-    CatequistalistComponent
+    CatequistalistComponent,
+    CatequesislistComponent,
+    CatequesisaddComponent,
+    CatequesiseditComponent,
+    DeletecatequesistypeComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +97,8 @@ import { CatequistalistComponent } from './view/catequista/catequistalist/catequ
     DeletepersondocumentComponent,
     DeletepersonmaterialComponent,
     DeleteparentComponent,
-    DeletegodparentComponent
+    DeletegodparentComponent,
+    DeletecatequesistypeComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
