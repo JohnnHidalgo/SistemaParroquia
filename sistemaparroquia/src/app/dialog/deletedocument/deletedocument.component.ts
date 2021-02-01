@@ -13,7 +13,7 @@ export class DeletedocumentComponent implements OnInit {
 
   constructor(private router:Router,public dialog: MatDialog,public dialogRef: MatDialogRef<DeletedocumentComponent>, public service:ServiceService) {}
   
-  document= new Document(1001, 'Cargando', 'UserTest', new Date(), true);
+  document= new Document(1001, 'Cargando', 'UserTest', "2021-02-02", true);
   
   ngOnInit(): void {
     this.getDocument();

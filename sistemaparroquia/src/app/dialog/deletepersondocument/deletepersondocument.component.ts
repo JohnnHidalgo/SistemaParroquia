@@ -13,7 +13,7 @@ export class DeletepersondocumentComponent implements OnInit {
 
   constructor(private router:Router,public dialog: MatDialog,public dialogRef: MatDialogRef<DeletepersondocumentComponent>, public service:PersondocumentService) { }
 
-  persondocument = new PersonDocument(1,1,1,false,new Date(), true);
+  persondocument = new PersonDocument(1,1,1,false,"2021-02-02", true);
 
 
   ngOnInit(): void {
