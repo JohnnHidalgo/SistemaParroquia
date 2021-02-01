@@ -16,7 +16,7 @@ export class PersonaddComponent implements OnInit {
   ngOnInit(): void {
     this.getAllCatequesistypes();
   }
-  persona = new CreatePerson('','','','',"2021-02-02",'','','','','',1,'',"2021-02-02",true)
+  persona = new CreatePerson('','','','',"2021-02-02",'','','','','',1,'',new Date(),true)
 
   catequesisType: CatequesisType[]=[];
   catequesisTypeToCreate= new CatequesisType(1,"","",new Date(),true);
@@ -38,6 +38,15 @@ export class PersonaddComponent implements OnInit {
       var date = yyyy+"-"+mm+"-"+dd;
 
       this.persona.dateborn=date;
+
+      var d = this.persona.tx_date.getDate();
+      var m = this.persona.tx_date.getMonth()+1;
+      var yy = this.persona.tx_date.getFullYear();
+      var dateCreate = yy+"-"+m+"-"+d;
+
+      this.persona.tx_date=dateCreate;
+
+
       this.service.createPerson(this.persona)
       .subscribe(data=>{
         alert("Creación Exitosa");
