@@ -1,5 +1,5 @@
 export class Person {
-    constructor(public idperson: number,public lastname: String,public secondlastname: String,public firstname: String,public secondname: String,public dateborn: Date,public address: String,public zone: String,public phone: String,public cellphone: String,public recibo: String,public idcatequesistype: number,public tx_user:String,public tx_date:Date,public active:boolean) {}
+    constructor(public idperson: number,public lastname: String,public secondlastname: String,public firstname: String,public secondname: String,public dateborn: String,public address: String,public zone: String,public phone: String,public cellphone: String,public recibo: String,public idcatequesistype: number,public tx_user:String,public tx_date:String,public active:boolean) {}
 }
 
 export class CreatePerson {
@@ -7,7 +7,7 @@ export class CreatePerson {
 }
 
 export class ListPerson {
-    constructor(public idperson: number,public lastname: String,public secondlastname: String,public firstname: String,public secondname: String,public dateborn: Date,public address: String,public zone: String,public phone: String,public cellphone: String,public recibo: String,public catequesistype: String,public tx_user:String,public tx_date:Date,public active:boolean) {}
+    constructor(public idperson: number,public lastname: String,public secondlastname: String,public firstname: String,public secondname: String,public dateborn: String,public address: String,public zone: String,public phone: String,public cellphone: String,public recibo: String,public catequesistype: String,public tx_user:String,public tx_date:any,public active:boolean) {}
 }
 
 export class CatGroupPerson {

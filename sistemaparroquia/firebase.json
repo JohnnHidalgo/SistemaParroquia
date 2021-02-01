@@ -1,10 +1,10 @@
 {
-    "hosting": {
-        "public": "dist/sistemaparroquia",
-        "ignore": [
-            "firebase.json",
-            "**/.*",
-            "**/node_modules/**"
-        ]
-    }
+  "hosting": {
+    "public": "dist/sistemaparroquia",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
 }

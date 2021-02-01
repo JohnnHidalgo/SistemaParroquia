@@ -25,15 +25,19 @@ export class PersonaddComponent implements OnInit {
     console.log(this.persona)
     console.log(this.persona.idcatequesistype)
 
-    this.catequesistypeservice.getOneMaterialByType(this.persona.idcatequesistype.toString())
+    this.catequesistypeservice.getOneCatTypeByType(this.persona.idcatequesistype.toString())
     .subscribe(data=>{
       this.catequesisTypeToCreate=data[0];
-      console.log('data');
-      console.log('AAAAthis.catequesisTypeToCreate');
-      console.log(this.catequesisTypeToCreate.idcatequesistype);
       this.persona.idcatequesistype = this.catequesisTypeToCreate.idcatequesistype;
-      console.log(this.persona)
       
+      console.log(this.persona)
+
+      var dd = this.persona.dateborn.getDate();
+      var mm = this.persona.dateborn.getMonth()+1;
+      var yyyy = this.persona.dateborn.getFullYear();
+      var date = yyyy+"-"+mm+"-"+dd;
+
+      this.persona.dateborn=date;
       this.service.createPerson(this.persona)
       .subscribe(data=>{
         alert("Creación Exitosa");
@@ -45,7 +49,7 @@ export class PersonaddComponent implements OnInit {
 
 
   getAllCatequesistypes(){
-    this.catequesistypeservice.getAllMaterial()
+    this.catequesistypeservice.getAllCatType()
     .subscribe(data=>{
       console.log(data);
       this.catequesisType=data;

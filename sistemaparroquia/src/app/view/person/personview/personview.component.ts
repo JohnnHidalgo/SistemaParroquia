@@ -35,7 +35,7 @@ export class PersonviewComponent implements OnInit {
     this.getCatGroupPerson();
   }
 
-  persona = new ListPerson(1,'','','','',new Date(),'','','','','','','',new Date(),true)
+  persona = new ListPerson(1,'','','','',"2021-02-02",'','','','','','','',"2021-02-02",true)
   documentList :PersonDocument[]=[];
   materialList :PersonMaterial[]=[];
   parentList :ListParentPerson[]=[];
