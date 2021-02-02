@@ -14,7 +14,7 @@ export class DeletepersonComponent implements OnInit {
   constructor(private router:Router,public dialog: MatDialog,public dialogRef: MatDialogRef<DeletepersonComponent>, public service:PersonserviceService) {}
   
   
-  persona = new Person(1,'','','','',new Date(),'','','','','',1,'',new Date(),true);
+  persona = new Person(1,'','','','',"2021-02-02",'','','','','',1,'',"2021-02-02",true);
 
 
 

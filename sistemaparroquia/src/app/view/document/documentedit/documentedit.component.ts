@@ -16,7 +16,7 @@ export class DocumenteditComponent implements OnInit {
     this.Edit();
   }
 
-  document= new Document(1001, 'Cargando', 'UserTest', new Date(), true);
+  document= new Document(1001, 'Cargando', 'UserTest', "2021-02-02", true);
   
   Edit(){
     const id = localStorage.getItem("iddocument")|| '{}';  

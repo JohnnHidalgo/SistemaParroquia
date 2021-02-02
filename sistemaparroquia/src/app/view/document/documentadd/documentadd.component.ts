@@ -14,7 +14,7 @@ export class DocumentaddComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  document= new CreateDocument('', 'UserTest', new Date(), true);
+  document= new CreateDocument('', 'UserTest', "2021-02-02", true);
   
   createDocument(){
   

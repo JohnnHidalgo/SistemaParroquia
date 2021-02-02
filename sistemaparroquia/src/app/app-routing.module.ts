@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CatequesisaddComponent } from './view/catequesis/catequesisadd/catequesisadd.component';
+import { CatequesiseditComponent } from './view/catequesis/catequesisedit/catequesisedit.component';
+import { CatequesislistComponent } from './view/catequesis/catequesislist/catequesislist.component';
 import { CatequistalistComponent } from './view/catequista/catequistalist/catequistalist.component';
 import { DocumentaddComponent } from './view/document/documentadd/documentadd.component';
 import { DocumenteditComponent } from './view/document/documentedit/documentedit.component';
@@ -44,6 +47,9 @@ const routes: Routes = [
   {path:'productadd',component:ProdctoaddComponent},
   {path:'productedit',component:ProdctoeditComponent},
   {path:'ventadd',component:VentaaddComponent},
+  {path:'catequesislist',component:CatequesislistComponent},
+  {path:'catequesisadd',component:CatequesisaddComponent},
+  {path:'catequesisedit',component:CatequesiseditComponent},
 ];
 
 @NgModule({

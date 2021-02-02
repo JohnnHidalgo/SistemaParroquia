@@ -1,5 +1,5 @@
 export class PersonDocument {
-    constructor(public idpersondocument: number, public iddocument: number, public idperson: number,public state:boolean, public documentdate:Date, public active: any) {}
+    constructor(public idpersondocument: number, public iddocument: number, public idperson: number,public state:boolean, public documentdate:String, public active: any) {}
 }
 
 export class CreatePersonDocument {

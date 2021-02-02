@@ -16,7 +16,7 @@ export class PersonaddComponent implements OnInit {
   ngOnInit(): void {
     this.getAllCatequesistypes();
   }
-  persona = new CreatePerson('','','','',"2021-02-02",'','','','','',1,'',"2021-02-02",true)
+  persona = new CreatePerson('','','','',"2021-02-02",'','','','','',1,'',new Date(),true)
 
   catequesisType: CatequesisType[]=[];
   catequesisTypeToCreate= new CatequesisType(1,"","",new Date(),true);
@@ -25,15 +25,28 @@ export class PersonaddComponent implements OnInit {
     console.log(this.persona)
     console.log(this.persona.idcatequesistype)
 
-    this.catequesistypeservice.getOneMaterialByType(this.persona.idcatequesistype.toString())
+    this.catequesistypeservice.getOneCatTypeByType(this.persona.idcatequesistype.toString())
     .subscribe(data=>{
       this.catequesisTypeToCreate=data[0];
-      console.log('data');
-      console.log('AAAAthis.catequesisTypeToCreate');
-      console.log(this.catequesisTypeToCreate.idcatequesistype);
       this.persona.idcatequesistype = this.catequesisTypeToCreate.idcatequesistype;
-      console.log(this.persona)
       
+      console.log(this.persona)
+
+      var dd = this.persona.dateborn.getDate();
+      var mm = this.persona.dateborn.getMonth()+1;
+      var yyyy = this.persona.dateborn.getFullYear();
+      var date = yyyy+"-"+mm+"-"+dd;
+
+      this.persona.dateborn=date;
+
+      var d = this.persona.tx_date.getDate();
+      var m = this.persona.tx_date.getMonth()+1;
+      var yy = this.persona.tx_date.getFullYear();
+      var dateCreate = yy+"-"+m+"-"+d;
+
+      this.persona.tx_date=dateCreate;
+
+
       this.service.createPerson(this.persona)
       .subscribe(data=>{
         alert("Creación Exitosa");
@@ -45,7 +58,7 @@ export class PersonaddComponent implements OnInit {
 
 
   getAllCatequesistypes(){
-    this.catequesistypeservice.getAllMaterial()
+    this.catequesistypeservice.getAllCatType()
     .subscribe(data=>{
       console.log(data);
       this.catequesisType=data;

@@ -12,23 +12,23 @@ export class CatequesistypeService {
   
   mainUrl='https://us-central1-sistemaparroquia.cloudfunctions.net/sistemaparroquiabackend/catequesistype/';
 
-  getAllMaterial(){  
+  getAllCatType(){  
     return this.http.get<CatequesisType[]>(this.mainUrl);
   }
   
-  getOneMaterial(idcatequesistype:number){  
+  getOneCatType(idcatequesistype:number){  
     return this.http.get<any>(this.mainUrl+idcatequesistype);
   }
 
-  getOneMaterialByType(catequesistype:String){  
+  getOneCatTypeByType(catequesistype:String){  
     return this.http.get<any>(this.mainUrl+"type/"+catequesistype);
   }
 
-  createMaterial(catequesisType:any){
+  createCatType(catequesisType:any){
     return this.http.post<any>(this.mainUrl,catequesisType);
   }
   
-  updateMaterial(catequesisType:CatequesisType){
+  updateCatType(catequesisType:CatequesisType){
     return this.http.put<CatequesisType>(this.mainUrl+catequesisType.idcatequesistype,catequesisType);
   }
 
