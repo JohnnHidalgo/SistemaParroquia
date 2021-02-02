@@ -22,7 +22,6 @@
 
         <div class="side-nave-link">
             <mat-nav-list class="mat-list">
-                <!--a mat-list-item [routerLink]="['home']">Dashboard</a-->
                 <mat-list-item [routerLink]="['personadd']" class="mat-item-hover">
                     <mat-icon class="icon-padding">dashboard</mat-icon>
                     <p class="text-padding">Registro</p>
@@ -38,16 +37,15 @@
                     <p class="text-padding">Catequistas</p>
                 </mat-list-item>
 
-                <mat-list-item class="mat-item-hover">
+                <mat-list-item [routerLink]="['ventadd']" class="mat-item-hover">
                     <mat-icon class="icon-padding">dashboard</mat-icon>
                     <p class="text-padding">Ventas</p>
                 </mat-list-item>
 
-                <mat-list-item class="mat-item-hover">
+                <mat-list-item [routerLink]="['productlist']" class="mat-item-hover">
                     <mat-icon class="icon-padding">dashboard</mat-icon>
                     <p class="text-padding">Productos</p>
                 </mat-list-item>
-                <!--a mat-list-item [routerLink]="['home']">Dashboard</a-->
 
                 <mat-list-item [routerLink]="['documentlist']" class="mat-item-hover">
                     <mat-icon class="icon-padding">dashboard</mat-icon>

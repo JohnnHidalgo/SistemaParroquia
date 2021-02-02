@@ -33,7 +33,6 @@ export class DocumentlistComponent implements OnInit {
   openDialog(document:Document){
     localStorage.setItem("iddocument",document.iddocument.toString());
     this.dialog.open(DeletedocumentComponent);
-
   }
 
   goAddDocument(){

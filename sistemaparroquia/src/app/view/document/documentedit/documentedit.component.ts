@@ -13,7 +13,7 @@ export class DocumenteditComponent implements OnInit {
   constructor(private router:Router,private service:ServiceService) { }
   
   ngOnInit() {
-    this.Edit();  
+    this.Edit();
   }
 
   document= new Document(1001, 'Cargando', 'UserTest', new Date(), true);

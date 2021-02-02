@@ -10,7 +10,6 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
 
   mainUrl='https://us-central1-sistemaparroquia.cloudfunctions.net/sistemaparroquiabackend/document/';
-  //mainUrl='http://localhost:5000/sistemaparroquia/us-central1/sistemaparroquiabackend';
   
   getAllDocument(){  
     return this.http.get<Document[]>(this.mainUrl);

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Nueva Venta
+                <button class="btn btn-warning">Vender</button>
+            </h3>
+        </div>
+        <div class="card-body" style=" height:450px; overflow:auto;">
+            <table class="table table-hover" cellspacing="0" cellpadding="1">
+                <thead>
+                    <tr class="text-center">
+                        <th>A</th>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>PRECIO</th>
+                        <th>C DISPONIBLES</th>
+                        <th>C VENTA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td></td>
+                    <tr *ngFor="let product of products" class="text-center">
+                        <td>
+                            <mat-checkbox [(ngModel)]="product.venta" name="venta"></mat-checkbox>
+                        </td>
+                        <td>{{product.idproducto}}</td>
+                        <td>{{product.productname}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.quantity}}</td>
+                        <td><input [(ngModel)]="product.quantity" name="quantity" type="text" class="form-control"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

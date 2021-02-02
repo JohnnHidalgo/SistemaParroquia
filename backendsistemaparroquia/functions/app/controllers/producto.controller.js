@@ -24,9 +24,9 @@ function addProduct(req, res) {
 }
 
 function editProduct(req, res) {
-    const { iddocument } = req.params
+    const { idproducto } = req.params
     const { productname, description, price, quantity } = req.body
-    productModels.editProduct({ iddocument, productname, description, price, quantity }, (data, error) => {
+    productModels.editProduct({ idproducto, productname, description, price, quantity }, (data, error) => {
         res.json(data)
     })
 }

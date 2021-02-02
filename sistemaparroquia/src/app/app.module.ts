@@ -38,7 +38,12 @@ import { DeletegodparentComponent } from './dialog/deletegodparent/deletegodpare
 import { GodparentlistComponent } from './view/godparent/godparentlist/godparentlist.component';
 import { ParentlistComponent } from './view/parent/parentlist/parentlist.component';
 import { CatequistalistComponent } from './view/catequista/catequistalist/catequistalist.component';
-
+import { ProdctolistComponent } from './view/producto/prodctolist/prodctolist.component';
+import { ProdctoaddComponent } from './view/producto/prodctoadd/prodctoadd.component';
+import { DeleteproductComponent } from './dialog/deleteproduct/deleteproduct.component';
+import { ProdctoeditComponent } from './view/producto/prodctoedit/prodctoedit.component';
+import { VentaaddComponent } from './view/venta/ventaadd/ventaadd.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +71,12 @@ import { CatequistalistComponent } from './view/catequista/catequistalist/catequ
     DeletegodparentComponent,
     GodparentlistComponent,
     ParentlistComponent,
-    CatequistalistComponent
+    CatequistalistComponent,
+    ProdctolistComponent,
+    ProdctoaddComponent,
+    DeleteproductComponent,
+    ProdctoeditComponent,
+    VentaaddComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +90,8 @@ import { CatequistalistComponent } from './view/catequista/catequistalist/catequ
     MatIconModule,
     MatToolbarModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatCheckboxModule
   ],
   entryComponents:[
     DeletedocumentComponent,
@@ -89,7 +100,8 @@ import { CatequistalistComponent } from './view/catequista/catequistalist/catequ
     DeletepersondocumentComponent,
     DeletepersonmaterialComponent,
     DeleteparentComponent,
-    DeletegodparentComponent
+    DeletegodparentComponent,
+    DeleteproductComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

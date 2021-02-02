@@ -17,6 +17,10 @@ import { PersonlistComponent } from './view/person/personlist/personlist.compone
 import { PersonviewComponent } from './view/person/personview/personview.component';
 import { PersondocumentaddComponent } from './view/persondocument/persondocumentadd/persondocumentadd.component';
 import { PersonmaterialaddComponent } from './view/personmaterial/personmaterialadd/personmaterialadd.component';
+import { ProdctoaddComponent } from './view/producto/prodctoadd/prodctoadd.component';
+import { ProdctoeditComponent } from './view/producto/prodctoedit/prodctoedit.component';
+import { ProdctolistComponent } from './view/producto/prodctolist/prodctolist.component';
+import { VentaaddComponent } from './view/venta/ventaadd/ventaadd.component';
 
 const routes: Routes = [
   {path:'documentadd',component:DocumentaddComponent},
@@ -36,6 +40,10 @@ const routes: Routes = [
   {path:'godparentadd',component:GodparentaddComponent},
   {path:'godparentlist',component:GodparentlistComponent},
   {path:'catequistalist',component:CatequistalistComponent},
+  {path:'productlist',component:ProdctolistComponent},
+  {path:'productadd',component:ProdctoaddComponent},
+  {path:'productedit',component:ProdctoeditComponent},
+  {path:'ventadd',component:VentaaddComponent},
 ];
 
 @NgModule({
