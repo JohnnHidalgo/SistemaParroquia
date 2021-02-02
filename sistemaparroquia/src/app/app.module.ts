@@ -38,20 +38,17 @@ import { DeletegodparentComponent } from './dialog/deletegodparent/deletegodpare
 import { GodparentlistComponent } from './view/godparent/godparentlist/godparentlist.component';
 import { ParentlistComponent } from './view/parent/parentlist/parentlist.component';
 import { CatequistalistComponent } from './view/catequista/catequistalist/catequistalist.component';
-<<<<<<< HEAD
 import { ProdctolistComponent } from './view/producto/prodctolist/prodctolist.component';
 import { ProdctoaddComponent } from './view/producto/prodctoadd/prodctoadd.component';
 import { DeleteproductComponent } from './dialog/deleteproduct/deleteproduct.component';
 import { ProdctoeditComponent } from './view/producto/prodctoedit/prodctoedit.component';
 import { VentaaddComponent } from './view/venta/ventaadd/ventaadd.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-=======
 import { CatequesislistComponent } from './view/catequesis/catequesislist/catequesislist.component';
 import { CatequesisaddComponent } from './view/catequesis/catequesisadd/catequesisadd.component';
 import { CatequesiseditComponent } from './view/catequesis/catequesisedit/catequesisedit.component';
 import { DeletecatequesistypeComponent } from './dialog/deletecatequesistype/deletecatequesistype.component';
 
->>>>>>> d0b17000f78b6ef12eb0088a8a9c8172e73a27e9
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,7 +81,7 @@ import { DeletecatequesistypeComponent } from './dialog/deletecatequesistype/del
     ProdctoaddComponent,
     DeleteproductComponent,
     ProdctoeditComponent,
-    VentaaddComponent
+    VentaaddComponent,
     CatequesislistComponent,
     CatequesisaddComponent,
     CatequesiseditComponent,
@@ -113,11 +110,8 @@ import { DeletecatequesistypeComponent } from './dialog/deletecatequesistype/del
     DeletepersonmaterialComponent,
     DeleteparentComponent,
     DeletegodparentComponent,
-<<<<<<< HEAD
-    DeleteproductComponent
-=======
+    DeleteproductComponent,
     DeletecatequesistypeComponent
->>>>>>> d0b17000f78b6ef12eb0088a8a9c8172e73a27e9
   ],
   providers: [],
   bootstrap: [AppComponent]
