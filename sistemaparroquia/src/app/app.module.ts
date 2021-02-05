@@ -48,6 +48,7 @@ import { CatequesislistComponent } from './view/catequesis/catequesislist/catequ
 import { CatequesisaddComponent } from './view/catequesis/catequesisadd/catequesisadd.component';
 import { CatequesiseditComponent } from './view/catequesis/catequesisedit/catequesisedit.component';
 import { DeletecatequesistypeComponent } from './dialog/deletecatequesistype/deletecatequesistype.component';
+import { SalelistComponent } from './view/sale/salelist/salelist.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { DeletecatequesistypeComponent } from './dialog/deletecatequesistype/del
     CatequesislistComponent,
     CatequesisaddComponent,
     CatequesiseditComponent,
-    DeletecatequesistypeComponent
+    DeletecatequesistypeComponent,
+    SalelistComponent
   ],
   imports: [
     BrowserModule,

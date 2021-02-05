@@ -21,7 +21,7 @@ export class ProdctoaddComponent implements OnInit {
   yyyy = this.date.getFullYear();
 
   dateprod = this.yyyy+"-"+this.mm+"-"+this.dd;
-  product= new CreateProduct('', '', 1,1,"",this.dateprod, true);
+  product= new CreateProduct('', '', 0.0,0.0,"",this.dateprod, true);
 
   createProduct(){
   

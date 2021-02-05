@@ -23,6 +23,7 @@ import { PersonmaterialaddComponent } from './view/personmaterial/personmaterial
 import { ProdctoaddComponent } from './view/producto/prodctoadd/prodctoadd.component';
 import { ProdctoeditComponent } from './view/producto/prodctoedit/prodctoedit.component';
 import { ProdctolistComponent } from './view/producto/prodctolist/prodctolist.component';
+import { SalelistComponent } from './view/sale/salelist/salelist.component';
 import { VentaaddComponent } from './view/venta/ventaadd/ventaadd.component';
 
 const routes: Routes = [
@@ -50,6 +51,7 @@ const routes: Routes = [
   {path:'catequesislist',component:CatequesislistComponent},
   {path:'catequesisadd',component:CatequesisaddComponent},
   {path:'catequesisedit',component:CatequesiseditComponent},
+  {path:'salelist',component:SalelistComponent},
 ];
 
 @NgModule({
