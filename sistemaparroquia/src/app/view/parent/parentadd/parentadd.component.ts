@@ -45,9 +45,8 @@ export class ParentaddComponent implements OnInit {
       .subscribe(data=>{
         this.parentList=data;
         this.lastid=this.parentList.length;
-        console.log(this.parentList);
-        console.log(this.lastid);
         this.parentPerson.idparent=this.lastid;
+        
         const id = localStorage.getItem("idperson")|| '{}';
         this.parentPerson.idperson= parseInt(id);
         this.parentPersonService.createParentPerson(this.parentPerson)

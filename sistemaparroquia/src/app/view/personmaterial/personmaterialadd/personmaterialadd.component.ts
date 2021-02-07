@@ -27,7 +27,7 @@ export class PersonmaterialaddComponent implements OnInit {
     const mat = this.personMaterial.idmaterial.toString();
     const idmat = mat.split('-');
     
-    this.personMaterial.idmaterial=parseInt(idmat[0]);;
+    this.personMaterial.idmaterial=parseInt(idmat[0]);
     
     console.log(this.personMaterial)
 

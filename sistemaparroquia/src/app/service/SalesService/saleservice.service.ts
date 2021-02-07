@@ -9,18 +9,18 @@ export class SaleserviceService {
 
   constructor(private http:HttpClient) { }
 
-  mainUrl='https://us-central1-sistemaparroquia.cloudfunctions.net/sistemaparroquiabackend/productsale/';
+  mainUrl='https://us-central1-sistemaparroquia.cloudfunctions.net/sistemaparroquiabackend/sale/';
 
-  getAllGodParent(){  
+  getAllSale(){  
     return this.http.get<Sale[]>(this.mainUrl);
   }
-  getOneGodParent(idsale:number){  
+  getOneSale(idsale:number){  
     return this.http.get<any>(this.mainUrl+idsale);
   }
-  createGodParent(sale:any){
+  createSale(sale:any){
     return this.http.post<any>(this.mainUrl,sale);
   }
-  deleteGodParent(sale:Sale){
+  deleteSale(sale:Sale){
     return this.http.put<Sale>(this.mainUrl+"delete/"+sale.idsale,parent);
   }
 
