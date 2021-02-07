@@ -21,15 +21,11 @@ export class PersonmaterialService {
 
   
   createMaterialsByPerson(personmaterial:any){
-    console.log(this.mainUrl)
-    console.log(personmaterial);
     return this.http.post<any>(this.mainUrl,personmaterial);
   }
   
 
   deleteMaterial(personmaterial:PersonMaterial){
-    console.log(personmaterial.idpersonmaterial);
-    console.log(this.mainUrl+"delete/");
     return this.http.put<PersonMaterial>(this.mainUrl+"delete/"+personmaterial.idpersonmaterial,personmaterial);
   }
 

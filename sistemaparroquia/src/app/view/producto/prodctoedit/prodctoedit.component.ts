@@ -40,7 +40,6 @@ export class ProdctoeditComponent implements OnInit {
     this.productUpdate.price=this.product.price;
     this.productUpdate.quantity=this.product.quantity;
 
-    console.log(this.productUpdate)
     this.service.updateProduct(this.productUpdate)
     .subscribe(data=>{
       this.productUpdate=data;

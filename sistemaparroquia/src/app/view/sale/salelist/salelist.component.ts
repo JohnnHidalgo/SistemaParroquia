@@ -19,7 +19,6 @@ export class SalelistComponent implements OnInit {
 
     this.http.getAllSale()
     .subscribe(data=>{
-      console.log(data);
       this.sales=data;
       console.log(this.sales)
     })

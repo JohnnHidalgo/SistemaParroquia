@@ -23,7 +23,6 @@ export class VentaaddComponent implements OnInit {
   ngOnInit(): void {
     this.http.getAllProducts()
     .subscribe(data=>{
-      console.log(data);
       this.products=data;
     });
   }

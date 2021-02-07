@@ -35,8 +35,6 @@ export class DeletepersondocumentComponent implements OnInit {
 
 
   deletePersonDocument(){
-    console.log('this.persondocument')
-    console.log(this.persondocument)
     this.service.deleteDocument(this.persondocument)
     .subscribe(data=>{
       this.persondocument=data;

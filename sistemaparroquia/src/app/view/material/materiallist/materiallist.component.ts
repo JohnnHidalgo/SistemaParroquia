@@ -20,7 +20,6 @@ export class MateriallistComponent implements OnInit {
   ngOnInit(): void {
     this.http.getAllMaterial()
     .subscribe(data=>{
-      console.log(data);
       this.materials=data;
     })
   }

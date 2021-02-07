@@ -28,8 +28,6 @@ export class DocumenteditComponent implements OnInit {
 
 
   Update(document:Document){
-    console.log('document');
-    console.log(document);
     this.service.updateDocument(document)
     .subscribe(data=>{
       this.document=data;

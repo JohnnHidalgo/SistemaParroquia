@@ -29,7 +29,6 @@ export class PersonmaterialaddComponent implements OnInit {
     
     this.personMaterial.idmaterial=parseInt(idmat[0]);
     
-    console.log(this.personMaterial)
 
 
     this.service.createMaterialsByPerson(this.personMaterial)
@@ -45,7 +44,6 @@ export class PersonmaterialaddComponent implements OnInit {
   getAllMaterrials(){
     this.http.getAllMaterial()
     .subscribe(data=>{
-      console.log(data);
       this.materials = data;
     });
   }

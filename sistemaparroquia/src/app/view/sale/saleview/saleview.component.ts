@@ -27,7 +27,6 @@ export class SaleviewComponent implements OnInit {
     .subscribe(data=>{
       this.sale=data[0];
     })
-    console.log(this.sale)
   }
 
   

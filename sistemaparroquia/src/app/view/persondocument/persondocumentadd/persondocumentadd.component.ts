@@ -31,7 +31,6 @@ export class PersondocumentaddComponent implements OnInit {
     const iddoc = doc.split('-');
     this.personDocument.iddocument=parseInt(iddoc[0]);;
 
-    console.log(this.personDocument.documentdate)
 
     var dd = this.personDocument.documentdate.getDate();
     var mm = this.personDocument.documentdate.getMonth()+1;
@@ -39,7 +38,6 @@ export class PersondocumentaddComponent implements OnInit {
     var date = yyyy+"-"+mm+"-"+dd;
 
     this.personDocument.documentdate=date;
-    console.log(this.personDocument.documentdate)
     
     this.service.createDocumentsByPerson(this.personDocument)
     .subscribe(data=>{
@@ -52,7 +50,6 @@ export class PersondocumentaddComponent implements OnInit {
   getAllDocuments(){
     this.http.getAllDocument()
     .subscribe(data=>{
-      console.log(data);
       this.documents = data;
     });
   }

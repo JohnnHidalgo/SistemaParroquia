@@ -11,11 +11,6 @@ export class SearchPersonPipe implements PipeTransform {
       return listPerson;
     }
 
-    console.log(searchValue);
-    console.log(searchValue.toLocaleLowerCase());
-    console.log(searchValue.toLowerCase());
-    console.log(searchValue.toString());
-    console.log(searchValue);
    
     return listPerson.filter(person=>
       person.lastname !== null && person.lastname.toLocaleLowerCase().includes(searchValue.toString())||

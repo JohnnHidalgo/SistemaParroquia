@@ -24,7 +24,6 @@ export class GodparentaddComponent implements OnInit {
 
   
   createGodParent(){
-    console.log(this.godparent)
     var dd = this.godparent.dateborn.getDate();
     var mm = this.godparent.dateborn.getMonth()+1;
     var yyyy = this.godparent.dateborn.getFullYear();
@@ -37,17 +36,13 @@ export class GodparentaddComponent implements OnInit {
 
     this.godparent.dateborn=date;
     this.godparent.tx_date=txdate;
-    console.log(this.godparent)
     
     this.service.createGodParent(this.godparent)
     .subscribe(data=>{
-      console.log("creacios")
       this.service.getAllGodParent()
       .subscribe(data=>{
         this.godparentList=data;
         this.lastid=this.godparentList.length;
-        console.log(this.godparentList);
-        console.log(this.lastid);
         this.godparentPerson.idgodparent=this.lastid;
         const id = localStorage.getItem("idperson")|| '{}';
         this.godparentPerson.idperson= parseInt(id);

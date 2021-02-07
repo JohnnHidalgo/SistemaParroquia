@@ -19,7 +19,6 @@ export class DocumentlistComponent implements OnInit {
   ngOnInit(): void {
     this.http.getAllDocument()
     .subscribe(data=>{
-      console.log(data);
       this.documents=data;
     });
   }

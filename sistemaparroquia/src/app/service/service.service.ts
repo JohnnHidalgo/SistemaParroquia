@@ -20,9 +20,6 @@ export class ServiceService {
   }
 
   createDocument(document:any){
-    console.log("SERVICE")
-    console.log(document)
-    console.log(this.mainUrl)
     return this.http.post<any>(this.mainUrl,document);
   }
   

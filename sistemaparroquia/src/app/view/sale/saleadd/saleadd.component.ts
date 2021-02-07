@@ -38,7 +38,6 @@ export class SaleaddComponent implements OnInit {
   getAllProducts(){
     this.productservice.getAllProducts()
     .subscribe(data=>{
-      console.log(data);
       this.productos=data;
     })
   }
@@ -64,8 +63,6 @@ export class SaleaddComponent implements OnInit {
         for( var i = 0; i < this.idlist.length; i++){ 
           this.prodSaleCreate.idsale=this.lastaleId+1;
           this.prodSaleCreate.idproducto=this.idlist[i][0];
-          console.log(this.prodSaleCreate)
-          console.log(this.idlist[i][0])
           this.productsaleserviceService.createProductSale(this.prodSaleCreate)
           .subscribe(data=>{
           })
@@ -83,12 +80,10 @@ export class SaleaddComponent implements OnInit {
     this.prodSelect.idproducto=parseInt(idproducto[0]);
     this.prodSelect.productname=idproducto[2];    
     this.idlist.push(idproducto);
-    console.log(idproducto)
     this.totalSalePrice+=parseFloat(idproducto[4]);
   }
 
   DeleteProd(idlis:any){
-    console.log(idlis)
     
     
     for( var i = 0; i < this.idlist.length; i++){ 

@@ -21,15 +21,11 @@ export class PersondocumentService {
 
   
   createDocumentsByPerson(persondocument:any){
-    console.log(this.mainUrl)
-    console.log(persondocument);
     return this.http.post<any>(this.mainUrl,persondocument);
   }
   
 
   deleteDocument(persondocument:PersonDocument){
-    console.log(persondocument.idpersondocument);
-    console.log(this.mainUrl+"delete/");
     return this.http.put<PersonDocument>(this.mainUrl+"delete/"+persondocument.idpersondocument,persondocument);
   }
 

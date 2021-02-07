@@ -27,8 +27,6 @@ export class MaterialeditComponent implements OnInit {
   }
 
   Update(material:Material){
-    console.log('document');
-    console.log(document);
     this.service.updateMaterial(material)
     .subscribe(data=>{
       this.material=data;

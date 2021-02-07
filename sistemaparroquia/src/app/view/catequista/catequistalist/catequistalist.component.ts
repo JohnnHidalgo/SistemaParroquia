@@ -19,7 +19,6 @@ export class CatequistalistComponent implements OnInit {
   ngOnInit(): void {
     this.http.getAllCatequistas()
     .subscribe(data=>{
-      console.log(data);
       this.catequistas=data;
     })
   }

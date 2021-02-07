@@ -23,7 +23,6 @@ export class GodparentlistComponent implements OnInit {
   ngOnInit(): void {
     this.http.getAllGodParent()
     .subscribe(data=>{
-      console.log(data);
       this.godparents=data;
     })
   }
@@ -34,7 +33,6 @@ export class GodparentlistComponent implements OnInit {
     this.godparentPerson.idperson= parseInt(id);
     this.godparentPerson.idgodparent= godparent.idgodparent;
 
-    console.log(this.godparentPerson);
     this.godparentPersonService.createGodParentPerson(this.godparentPerson)
     .subscribe(data=>{
       alert("Creación Exitosa");

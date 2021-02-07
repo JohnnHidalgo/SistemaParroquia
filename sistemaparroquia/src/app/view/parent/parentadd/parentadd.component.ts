@@ -23,7 +23,6 @@ export class ParentaddComponent implements OnInit {
   lastid=0;
 
   createParent(){
-    console.log(this.parent)
     var dd = this.parent.dateborn.getDate();
     var mm = this.parent.dateborn.getMonth()+1;
     var yyyy = this.parent.dateborn.getFullYear();
@@ -36,11 +35,9 @@ export class ParentaddComponent implements OnInit {
 
     this.parent.dateborn=date;
     this.parent.tx_date=txdate;
-    console.log(this.parent)
     
     this.service.createParent(this.parent)
     .subscribe(data=>{
-      console.log("creacios")
       this.service.getAllParent()
       .subscribe(data=>{
         this.parentList=data;
