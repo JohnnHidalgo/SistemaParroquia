@@ -9,6 +9,7 @@ import { DocumenteditComponent } from './view/document/documentedit/documentedit
 import { DocumentlistComponent } from './view/document/documentlist/documentlist.component';
 import { GodparentaddComponent } from './view/godparent/godparentadd/godparentadd.component';
 import { GodparentlistComponent } from './view/godparent/godparentlist/godparentlist.component';
+import { HomeComponent } from './view/home/home.component';
 import { MaterialaddComponent } from './view/material/materialadd/materialadd.component';
 import { MaterialeditComponent } from './view/material/materialedit/materialedit.component';
 import { MateriallistComponent } from './view/material/materiallist/materiallist.component';
@@ -29,6 +30,7 @@ import { SaleviewComponent } from './view/sale/saleview/saleview.component';
 import { VentaaddComponent } from './view/venta/ventaadd/ventaadd.component';
 
 const routes: Routes = [
+  {path:'home',component:HomeComponent},
   {path:'documentadd',component:DocumentaddComponent},
   {path:'documentlist',component:DocumentlistComponent},
   {path:'documentedit',component:DocumenteditComponent},

@@ -51,6 +51,7 @@ import { DeletecatequesistypeComponent } from './dialog/deletecatequesistype/del
 import { SalelistComponent } from './view/sale/salelist/salelist.component';
 import { SaleviewComponent } from './view/sale/saleview/saleview.component';
 import { SaleaddComponent } from './view/sale/saleadd/saleadd.component';
+import { HomeComponent } from './view/home/home.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { SaleaddComponent } from './view/sale/saleadd/saleadd.component';
     DeletecatequesistypeComponent,
     SalelistComponent,
     SaleviewComponent,
-    SaleaddComponent
+    SaleaddComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

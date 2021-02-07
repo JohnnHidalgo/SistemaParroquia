@@ -1,0 +1,20 @@
+.button {
+    background-color: #c0c0c0; 
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .iconbut {
+    width: 150px;
+    height: 150px;
+  }
