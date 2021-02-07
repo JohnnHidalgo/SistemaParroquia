@@ -4,7 +4,7 @@ const test = require('express');
 var apptset = test();
 var cors = require('cors')
 
-apptset.use(cors({ origin: '*' }));
+apptset.use(cors({ origin: 'https://frontsistemaparroquia.web.app/' }));
 apptset.use(cors());
 
 apptset.use(function(req, res, next) {

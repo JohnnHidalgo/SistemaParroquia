@@ -16,8 +16,8 @@ function getOneSale(req, res) {
 }
 
 function addSale(req, res) {
-    const { personsame, totalprice, comentary, datesale, tx_user, tx_date, active } = req.body
-    saleModels.addSale({ personsame, totalprice, comentary, datesale, tx_user, tx_date, active }, (data, error) => {
+    const { personname, totalprice, comentary, datesale, tx_user, tx_date, active } = req.body
+    saleModels.addSale({ personname, totalprice, comentary, datesale, tx_user, tx_date, active }, (data, error) => {
         res.json(data)
     })
 }

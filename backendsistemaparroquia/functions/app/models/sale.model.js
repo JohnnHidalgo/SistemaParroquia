@@ -23,7 +23,7 @@ var saleModels = {
     },
     addSale: (data, callback) => {
         if (connection) {
-            let sql = `insert into sale(personsame, totalprice, comentary, datesale, tx_user, tx_date, active) values (${connection.escape(data.personsame)},${connection.escape(data.totalprice)},${connection.escape(data.comentary)}, ${connection.escape(data.datesale)},  ${connection.escape(data.tx_user)}, ${connection.escape(data.tx_date)}, ${connection.escape(data.active)})`
+            let sql = `insert into sale(personname, totalprice, comentary, datesale, tx_user, tx_date, active) values (${connection.escape(data.personname)},${connection.escape(data.totalprice)},${connection.escape(data.comentary)}, ${connection.escape(data.datesale)},  ${connection.escape(data.tx_user)}, ${connection.escape(data.tx_date)}, ${connection.escape(data.active)})`
             connection.query(sql, (error, rows) => {
                 if (error) throw error
                 callback({ message: 'documento insertado' })

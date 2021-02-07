@@ -5,7 +5,6 @@ var apptset = test();
 var cors = require('cors')
 
 apptset.use(cors({ origin: '*' }));
-apptset.use(cors({ origin: 'http://localhost:4200' }));
 apptset.use(cors());
 
 apptset.use(function(req, res, next) {

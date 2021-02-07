@@ -27,7 +27,7 @@ var saleProductModels = {
 
     getAllProductSaleBySale: (data, callback) => {
         if (connection) {
-            let sql = `select a.idsale, b.idproductsale, c.productname from sale a, productsale b, producto c where a.idsale = ${connection.escape(data.idsale)} and  a.idsale = b.idsale and b.idproducto = c.idproducto;`
+            let sql = `select a.idsale, b.idproductsale, c.productname, c.price from sale a, productsale b, producto c where a.idsale = ${connection.escape(data.idsale)} and  a.idsale = b.idsale and b.idproducto = c.idproducto;`
             connection.query(sql, (error, rows) => {
                 if (error) throw error
                 callback(rows)
