@@ -11,14 +11,14 @@
                     <select [(ngModel)]="prodSelect.productname" name="productname" class="form-control">
                         <option *ngFor="let producto of productos" >{{producto.idproducto}} -- {{producto.productname}} -- {{producto.price}}</option>
                     </select>
-                    <button (click)="agregarProduct()" class="btn btn-danger">Agregar</button>
+                    <button (click)="agregarProduct()" class="btn btn-success">Agregar Producto</button>
                 </div>
 
                 <div *ngFor="let idlis of idlist" class="form-group">
-                    <td>{{idlis}}</td>
                     <td>
-                        <button (click)="DeleteProd(idlis)" class="btn btn-warning">Quitar</button>
+                        <button (click)="DeleteProd(idlis)" class="btn btn-danger"><mat-icon>delete</mat-icon> </button>
                     </td>              
+                    <td>{{idlis}}</td>
                 </div>
                 <div class="form-group">
                     <td>PrecioTotal</td>
@@ -43,7 +43,7 @@
                 </div>
 
 
-                <button (click)="createProductSale()" class="btn btn-danger">Vender</button>
+                <button (click)="createProductSale()" class="btn btn-success">Vender</button>
 
             </form>
         </div>

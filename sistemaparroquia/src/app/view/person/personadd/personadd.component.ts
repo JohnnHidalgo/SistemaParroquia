@@ -21,17 +21,13 @@ export class PersonaddComponent implements OnInit {
   catequesisType: CatequesisType[]=[];
   catequesisTypeToCreate= new CatequesisType(1,"","",new Date(),true);
   
-  createPerson(){  
-    console.log(this.persona)
-    console.log(this.persona.idcatequesistype)
+  createPerson(){
 
     this.catequesistypeservice.getOneCatTypeByType(this.persona.idcatequesistype.toString())
     .subscribe(data=>{
       this.catequesisTypeToCreate=data[0];
       this.persona.idcatequesistype = this.catequesisTypeToCreate.idcatequesistype;
       
-      console.log(this.persona)
-
       var dd = this.persona.dateborn.getDate();
       var mm = this.persona.dateborn.getMonth()+1;
       var yyyy = this.persona.dateborn.getFullYear();
@@ -60,7 +56,6 @@ export class PersonaddComponent implements OnInit {
   getAllCatequesistypes(){
     this.catequesistypeservice.getAllCatType()
     .subscribe(data=>{
-      console.log(data);
       this.catequesisType=data;
     })
   }

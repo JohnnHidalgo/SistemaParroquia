@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header">
             <h3>Catecumenos
-                <button (click)="goAddPerson()" class="btn btn-warning">Agregar Nuevo</button>
+                <button (click)="goAddPerson()" class="btn btn-info">Agregar <mat-icon>person_add</mat-icon> </button>
             </h3>
         </div>
 
@@ -41,8 +41,8 @@
 
 
                         <td>
-                            <button (click)="ViewPersona(person)" class="btn btn-warning">Ver</button>
-                            <button (click)="openDialog(person)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                            <button (click)="ViewPersona(person)" class="btn btn-info"> <mat-icon>visibility</mat-icon> </button>
+                            <button (click)="openDialog(person)" class="btn btn-danger"><mat-icon>delete</mat-icon> </button>
                         </td>
                     </tr>
                 </tbody>

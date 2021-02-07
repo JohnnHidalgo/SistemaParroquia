@@ -21,7 +21,6 @@ export class PersonlistComponent implements OnInit {
   ngOnInit(): void {
     this.http.getAllPerson()
     .subscribe(data=>{
-      console.log(data);
       this.persons=data;
     })
   }

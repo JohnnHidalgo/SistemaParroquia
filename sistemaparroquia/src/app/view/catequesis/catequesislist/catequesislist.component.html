@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header">
             <h3>Documentos
-                <button (click)="goAddCatequesisType()" class="btn btn-warning">Agregar Nuevo</button>
+                <button (click)="goAddCatequesisType()" class="btn btn-info">Agregar Nuevo</button>
             </h3>
         </div>
         <div class="card-body" style=" height:450px; overflow:auto;">
@@ -19,8 +19,8 @@
                         <td>{{catequesi.idcatequesistype}}</td>
                         <td>{{catequesi.catequesistype}}</td>
                         <td>
-                            <button (click)="EditCatequesisType(catequesi)" class="btn btn-warning">Editar</button>
-                            <button (click)="openDialog(catequesi)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                            <button (click)="EditCatequesisType(catequesi)" class="btn btn-secondary"><mat-icon>edit</mat-icon></button>
+                            <button (click)="openDialog(catequesi)" class="btn btn-danger"><mat-icon>delete</mat-icon></button>
                         </td>
                     </tr>
                 </tbody>

@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header">
             <h3>Producto
-                <button (click)="goAddProduct()" class="btn btn-warning">Agregar Producto</button>
+                <button (click)="goAddProduct()" class="btn btn-info">Agregar Producto</button>
             </h3>
         </div>
         <div class="card-body" style=" height:450px; overflow:auto;">
@@ -23,8 +23,8 @@
                         <td>{{product.price}}</td>
                         <td>{{product.quantity}}</td>
                         <td>
-                            <button (click)="EditProduct(product)" class="btn btn-warning">Editar</button>
-                            <button (click)="openDialog(product)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                            <button (click)="EditProduct(product)" class="btn btn-secondary"><mat-icon>edit</mat-icon></button>
+                            <button (click)="openDialog(product)" class="btn btn-danger" ><mat-icon>delete</mat-icon></button>
                         </td>
                     </tr>
                 </tbody>

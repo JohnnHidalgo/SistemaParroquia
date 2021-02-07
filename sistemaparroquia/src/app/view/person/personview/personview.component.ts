@@ -44,7 +44,6 @@ export class PersonviewComponent implements OnInit {
 
   getPerson(){
     const id = localStorage.getItem("idperson")|| '{}';  
-    console.log(this.persona);
     this.service.getOnePersonCatequesis(+id)
     .subscribe(data=>{
       this.persona=data[0];
@@ -93,8 +92,6 @@ export class PersonviewComponent implements OnInit {
   }
 
   deleteDocument(document:PersonDocument){
-    console.log(document)
-    console.log(document.idpersondocument)
     localStorage.setItem("idpersondocument",document.idpersondocument.toString());
     this.dialog.open(DeletepersondocumentComponent);
   }

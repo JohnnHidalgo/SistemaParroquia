@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header">
             <h3>Materiales
-                <button (click)="goAddMaterial()" class="btn btn-warning">Agregar Nuevo</button>
+                <button (click)="goAddMaterial()" class="btn btn-info">Agregar Nuevo</button>
             </h3>
         </div>
 
@@ -20,8 +20,8 @@
                         <td>{{material.idmaterial}}</td>
                         <td>{{material.title}}</td>
                         <td>
-                            <button (click)="EditMaterial(material)" class="btn btn-warning">Editar</button>
-                            <button (click)="openDialog(material)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                            <button (click)="EditMaterial(material)" class="btn btn-secondary"><mat-icon>edit</mat-icon></button>
+                            <button (click)="openDialog(material)" class="btn btn-danger"><mat-icon>delete</mat-icon></button>
                         </td>
                     </tr>
                 </tbody>

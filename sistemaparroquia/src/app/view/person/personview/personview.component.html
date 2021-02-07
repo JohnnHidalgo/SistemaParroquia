@@ -71,7 +71,8 @@
 
             <td>
                 <tr class="card-header">Documentos
-                    <button (click)="goAddPersonDocument()" class="btn btn-warning">Agregar Nuevo</button></tr>
+                    <button (click)="goAddPersonDocument()" class="btn btn-info">Agregar <mat-icon>add</mat-icon></button></tr>
+
                 <tr *ngFor="let document of documentList">
                     <td><button (click)="deleteDocument(document)" class="btn btn-danger"><i class="fa fa-trash"></i></button> {{document.title}} -- {{document.documentdate}}</td>
 
@@ -79,7 +80,7 @@
             </td>
             <td>
                 <tr class="card-header">Material
-                    <button (click)="goAddPersonMaterial()" class="btn btn-warning">Agregar Nuevo</button></tr>
+                    <button (click)="goAddPersonMaterial()" class="btn btn-info">Agregar <mat-icon>add</mat-icon></button></tr>
                 <tr *ngFor="let material of materialList">
                     <td> <button (click)="deleteMaterial(material)" class="btn btn-danger"><i class="fa fa-trash"></i></button> {{material.title}} </td>
                 </tr>
@@ -91,8 +92,8 @@
 
         <div class="card-header ">
             <h3>Padres o Apoderados
-                <button (click)="gotoNewParent()" class="btn btn-warning">Agregar Nuevo</button>
-                <button (click)="gotoViewParents()" class="btn btn-warning">Buscar</button>
+                <button (click)="gotoNewParent()" class="btn btn-info">Agregar  <mat-icon>add</mat-icon></button>
+                <button (click)="gotoViewParents()" class="btn btn-secondary">Buscar <mat-icon>search</mat-icon></button>
             </h3>
         </div>
 
@@ -111,8 +112,7 @@
                         <td>{{parents.lastname}} {{parents.secondlastname}}</td>
                         <td>{{parents.firstname}} {{parents.secondname}}</td>
                         <td>
-                            <button (click)="gotoViewParent()" class="btn btn-warning">Ver</button>
-                            <button (click)="deleteParent(parents)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                            <button (click)="deleteParent(parents)" class="btn btn-danger" ><mat-icon>delete</mat-icon> </button>
                         </td>
                     </tr>
                 </tbody>
@@ -122,8 +122,8 @@
 
         <div class="card-header ">
             <h3>Padrinos
-                <button (click)="gotoNewGodParent()" class="btn btn-warning">Agregar Nuevo</button>
-                <button (click)="gotoViewGodParents()" class="btn btn-warning">Buscar</button>
+                <button (click)="gotoNewGodParent()" class="btn btn-info">Agregar <mat-icon>add</mat-icon></button>
+                <button (click)="gotoViewGodParents()" class="btn btn-secondary">Buscar <mat-icon>search</mat-icon> </button>
             </h3>
         </div>
 
@@ -142,8 +142,7 @@
                         <td>{{godparents.lastname}} {{godparents.secondlastname}}</td>
                         <td>{{godparents.firstname}} {{godparents.secondname}}</td>
                         <td>
-                            <button (click)="gotoViewGodParent()" class="btn btn-warning">Ver</button>
-                            <button (click)="deleteGodParent(godparents)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                            <button (click)="deleteGodParent(godparents)" class="btn btn-danger"><mat-icon>delete</mat-icon> </button>
                         </td>
                     </tr>
                 </tbody>
